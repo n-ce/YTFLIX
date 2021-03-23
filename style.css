@@ -2,6 +2,7 @@ h1,h2,input,ul,.link{text-align: center;}
 .link{float:left;width:25%;}
 body{padding: 1rem;}
 p{color:white;}
+ul{height:97vh;}
 form{
 	height: 92vh;
 	display: flex;
