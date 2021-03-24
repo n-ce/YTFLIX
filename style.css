@@ -1,9 +1,10 @@
-h1,h2,input,ul,.link{text-align: center;}
+h1,h2,input,ul,.link,p{text-align: center;}
 .link{float:left;width:20%}
-h1,.link,label{color: red;}
+h1,.link,label,p.uk-text-bolder{color: red;}
 input[type="checkbox"] {display: none;}
 p{color:white;}
 label,form{display:flex;align-items:center;justify-content: center;}
+body{height: 96vh;}
 form{
 	height: 92vh;
 	flex-direction: column;
