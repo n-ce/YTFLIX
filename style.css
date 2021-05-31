@@ -15,3 +15,9 @@ form{
 	background-size: cover;
 }
 pre{background-color:#00000000;color:red;}
+
+@media screen and (orientation:landscape){
+#Gallery{
+  display:flex;
+  flex-direction:row;
+}}
