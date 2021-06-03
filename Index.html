@@ -13,24 +13,41 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body class="uk-text-center">
 	<h1 class="uk-text-bolder">YTFLIX</h1>
-	<pre> A Free Movie & Series Library made of Youtube links.</pre>
+	<blockquote> A Free Movie & Series Library made of Youtube links.</blockquote>
 	<div>
 		<a class="link"href="#modal-center" uk-toggle uk-icon="icon: info"></a>
 		<a class="link"href="https://github.com/n-ce/YTFLIX" uk-icon="icon: github"></a>
-		<a class="link"href="Post.html" uk-icon="icon: plus-circle"></a>
-		<a class="link"href="Report.html" uk-icon="icon: warning"></a>
+		<a class="link"href="#post" uk-toggle uk-icon="icon: plus-circle"></a>
 		<label class="link" uk-icon="icon: paint-bucket"><input class="uk-checkbox" type="checkbox" onclick="darkmode()"></label>
+	</div>
+	<div id="post" class="uk-flex-top" uk-modal>
+		   <form data-netlify="true" name='Post' method='POST' class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+		     <h4>POST MOVIE LINK HERE.</h4>
+		     <p>
+		       <input class="uk-input" type="text" name="Title" placeholder="Title" />
+		     </p>
+		     <p>
+		       <input class="uk-input" type="url" name="url" placeholder="Link" />
+		     </p>
+		     <h4>REPORT DEAD LINK HERE.</h4>
+		     <p>
+		       <input class="uk-input" type="text" name="DeadLink" placeholder="Title" />
+		     </p>
+		     <p>
+		       <button class="uk-button uk-button-primary" type="submit">SUBMIT</button>
+		     </p>
+		   </form>
 		</div>
-		<div id="modal-center" class="uk-flex-top" uk-modal>
+	<div id="modal-center" class="uk-flex-top" uk-modal>
 			<div class=" uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
 				<button class="uk-modal-close-default" type="button" uk-close></button>
 				<p style="color:black">YTFLIX is a free and open source website with one goal which is to provide full length movie links from youtube. It has been a solo project so far, it utilizes the UIKIT Framework and is completely coded on a mobile device using Spck Code Editor on Android. Thank you for reading and donate if you want to support the project.<br><br>@n-ce, Animesh Nath.</p>
 				</div>
 				</div>
 				<br>
-				<div id="Gallery">
+	<div id="Gallery">
 	<div class="uk-padding">
 		<a href="Categories/Anime.html">
 			<div class=" uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-lighten uk-background-cover" style="background-image: url(Assets/Anime.webp)">
@@ -53,7 +70,7 @@
 			</div></a>
 		</div>
 		</div>
-		<p class="uk-text-bolder uk-text-italic">version 1.2 Landmine</p>
+	<p class="uk-text-bolder uk-text-italic">version 1.2 Landmine</p>
 <script src="function.js"></script>
 </body>
 </html>
