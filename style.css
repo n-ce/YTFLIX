@@ -37,10 +37,7 @@ html,
   background-color: #00000000;
 }
 
-@media screen and (orientation: landscape) {
-  #Gallery {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+#Gallery {
+  display: flex;
+  flex-direction: column;
 }
