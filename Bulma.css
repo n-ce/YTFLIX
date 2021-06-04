@@ -1,0 +1,10 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"; 
+#title {
+  margin: -0.375rem 0 -0.375rem 0;
+  background-color: transparent;
+}
+.navbar-item{
+  display: flex;
+  align-items: center;
+}
+.material-icons.c{color:hsl(348,100%,61%)}
