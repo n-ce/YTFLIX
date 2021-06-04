@@ -1,19 +1,15 @@
 body {
   height: 100vh;
-  padding: 1rem;
-}
+  }
 
 .link {
   float: left;
   width: 25%;
 }
-
 h1,
-.link,
 label,
-p.uk-text-bolder,
-h2,
-blockquote {
+.link,h2,
+blockquote,p.uk-text-italic{
   color: crimson;
 }
 
@@ -36,7 +32,10 @@ html,
 .uk-search-input {
   background-color: #00000000;
 }
-
+.uk-padding{
+  padding:1.5rem 1.5rem 0 1.5rem;
+}
+.uk-card{border-radius:1rem}
 @media screen and (orientation: landscape) {
   #Gallery {
     display: flex;
