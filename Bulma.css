@@ -15,6 +15,5 @@ body{
   color: white;
   margin:3rem 2rem 0 0;
 }
-input[type="checkbox"] {display: none;}
 form{display:none;}
 .show{display:block;}
