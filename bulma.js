@@ -63,7 +63,17 @@ checkBox.addEventListener('change', function() {
 });
 
 //CARDS
-document.getElementById("AnimeClick").onclick = function() { myFunction1() };
+{document.getElementById("AnimeClick").onclick = function() { myFunction1() };
 function myFunction1() {
   document.querySelector('#Anime').classList.toggle("show");
-}
+}};
+//
+{document.getElementById("EngClick").onclick = function() { myFunction2() };
+function myFunction2() {
+  document.querySelector('#English').classList.toggle("show");
+}};
+//
+{document.getElementById("HinClick").onclick = function() { myFunction3() };
+function myFunction3() {
+  document.querySelector('#Hindi').classList.toggle("show");
+}};
