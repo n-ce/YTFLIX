@@ -72,7 +72,7 @@ function myFunction1() {
 function myFunction2() {
   document.querySelector('#English').classList.toggle("show");
 }};
-//
+
 {document.getElementById("HinClick").onclick = function() { myFunction3() };
 function myFunction3() {
   document.querySelector('#Hindi').classList.toggle("show");
