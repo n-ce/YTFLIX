@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="hsl(348,80%,61%)" />
     <link rel="stylesheet" href="Bulma.css" type="text/css" media="all" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
+<!--NAVBAR-->
 <nav class="navbar is-danger" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="title navbar-item" id="title">YTFLIX</a>
@@ -20,23 +22,21 @@
     </a>
   </div>
 
-  <div id="navlist" class="navbar-menu">
+  <div id="navlist"class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
+      <a class="navbar-item" id="btn">
         <span class="material-icons c">info
         </span>&nbsp;About
-      </a>
+        </a>
 
-      <a class="navbar-item">
+      <a class="navbar-item" id="form">
         <span class="material-icons c">add_box
-        </span>
-        &nbsp;Post New or Report Dead Link
+        </span>&nbsp;Post New or Report Dead Link
       </a>
       
-      <a class="navbar-item" href="#">
+      <a class="navbar-item" href="https://github.com/n-ce/ytflix">
         <span class="material-icons c">source
-        </span>
-        &nbsp;Fork on Github
+        </span>&nbsp;Fork on Github
       </a>
     </div>
 
@@ -44,15 +44,59 @@
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-secondary">
-            <span class="material-icons md-48 c">
-              dark_mode
-            </span>
+          <label class="material-icons md-48 c">
+            <input type="checkbox" onclick="darkmode()">dark_mode
+          </label>
           </a>
         </div>
       </div>
     </div>
   </div>
 </nav>
+<!--MODAL-->
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p id="about">YTFLIX is a free and open source website with one goal which is to provide full length movie links from youtube. It has been a solo project so far, it utilizes the UIKIT Framework and is completely coded on a mobile device using Spck Code Editor on Android. Thank you for reading and Share this website to your friends & family.<br><br>@n-ce, Animesh Nath.</p>
+	</p>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<!--Post/Repost-->
+
+<form data-netlify="true" name='Post' method='POST' id="post">
+
+<div class="field">
+  <label class="label">Name</label>
+  <div class="control">
+    <input class="input is-primary" type="text" name="Title" placeholder="Enter Movie Title">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Link</label>
+  <div class="control">
+    <input class="input is-link" type="url" name="url" placeholder="Enter the YouTube Link"/>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Dead Link</label>
+  <div class="control">
+    <input class="input is-danger" type="text" name="deadlink" placeholder="Enter the Dead link Movie Title">
+  </div>
+</div>
+
+<div class="field is-grouped is-grouped-centered">
+  <div class="control">
+    <button class="button is-link" type="submit">Submit</button>
+  </div>
+</div>
+</form>
+
+<!--CARDS-->
+<!--Version Info-->
+
 <script src="bulma.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
