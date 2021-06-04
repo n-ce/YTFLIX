@@ -1,81 +1,153 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="hsl(348,80%,61%)" />
     <meta name="description" content="An English, Indian, Anime Series and Movie Content library built upon YouTube links. ">
     <meta name="keywords" content="Youtube,Movies,Series,Free">
     <meta name="author" content="Animesh Nath">
-    <meta name="theme-color" content="crimson">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>YTFLIX</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="Bulma.css" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="uk-text-center">
-	
-	<h1 class="uk-text-bolder">YTFLIX</h1>
-	
-	<blockquote> A Free Movie & Series Library made of Youtube links.</blockquote>
-	
-	<div>
-		<a class="link"href="#modal-center" uk-toggle uk-icon="icon: info"></a>
-		<a class="link"href="https://github.com/n-ce/YTFLIX" uk-icon="icon: github"></a>
-		<a class="link"href="#post" uk-toggle uk-icon="icon: plus-circle"></a>
-		<label class="link" uk-icon="icon: paint-bucket"><input class="uk-checkbox" type="checkbox" onclick="darkmode()"></label>
-	</div>
-	
-	<div id="post" class="uk-flex-top" uk-modal>
-	  <form data-netlify="true" name='Post' method='POST' class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-	    <h4>POST MOVIE LINK HERE.</h4>
-	    <p><input class="uk-input" type="text" name="Title" placeholder="Title" /></p>
-	    <p><input class="uk-input" type="url" name="url" placeholder="Link" /></p>
-	    <h4>REPORT DEAD LINK HERE.</h4>
-	    <p><input class="uk-input" type="text" name="DeadLink" placeholder="Title" /></p>
-	    <p><button class="uk-button uk-button-primary" type="submit">SUBMIT</button></p>
-	  </form>
-	</div>
-		
-	<div id="modal-center" class="uk-flex-top" uk-modal>
-	  <div class=" uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-	    <button class="uk-modal-close-default" type="button" uk-close></button>
-	    <p style="color:black">YTFLIX is a free and open source website with one goal which is to provide full length movie links from youtube. It has been a solo project so far, it utilizes the UIKIT Framework and is completely coded on a mobile device using Spck Code Editor on Android. Thank you for reading and Share this website to your friends & family.<br><br>@n-ce, Animesh Nath.</p>
-		</div>
-	</div>
-	<br>
-	
-	<div id="Gallery">
-	  
-	<div class="uk-padding">
-		<a href="Categories/Anime.html">
-			<div class=" uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-lighten uk-background-cover" style="background-image: url(Assets/Anime.webp)">
-			  <h3 class="uk-card-title uk-text-bolder">Anime</h3>
-			  <p>Watch Anime Content from Youtube in Japanese & English</p>
-			</div>
-		</a>
-	</div>
-	
-		<div class="uk-padding">
-		  <a href="Categories/English.html">
-		    <div class=" uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/English.webp)">
-		      <h3 class="uk-card-title uk-text-bolder">English</h3>
-		      <p>Watch Hollywood & Global Content from Youtube in English & Hindi Dubbed</p>
-		    </div>
-		  </a>
-		</div>
-		
-		<div class="uk-padding">
-			<a href="Categories/Hindi.html">
-			  <div class="uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-difference uk-background-cover" style="background-image: url(Assets/Hindi.webp)">
-			    <h3 class="uk-card-title uk-text-bolder">Hindi</h3>
-			    <p>Watch Bollywood & Hindi Indie Content from Youtube</p>
-			  </div>
-			</a>
-		</div>
-	
-	</div>
-	
-	<p class="uk-text-bolder uk-text-italic">version 1.3 Cave</p>
 
-	<script src="function.js"></script>
+<body>
+<!--NAVBAR-->
+<nav class="navbar is-danger" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="title navbar-item" id="title">YTFLIX</a>
 
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navlist">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navlist"class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" id="btn">
+        <span class="material-icons c">info
+        </span>&nbsp;About
+        </a>
+
+      <a class="navbar-item" id="form">
+        <span class="material-icons c">add_box
+        </span>&nbsp;Post New or Report Dead Link
+      </a>
+      
+      <a class="navbar-item" href="https://github.com/n-ce/ytflix">
+        <span class="material-icons c">source
+        </span>&nbsp;Fork on Github
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-secondary">
+          <label class="material-icons md-48 c">
+            <input type="checkbox" class="is-hidden" onclick="darkmode()">dark_mode
+          </label>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!--MODAL-->
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p id="about">YTFLIX is a free and open source website with one goal which is to provide full length movie links from youtube. It has been a solo project so far, it utilizes the UIKIT Framework and is completely coded on a mobile device using Spck Code Editor on Android. Thank you for reading and Share this website to your friends & family.<br><br>@n-ce, Animesh Nath.</p>
+	</p>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<!--Post/Repost-->
+
+<form data-netlify="true" name='Post' method='POST'>
+
+<div class="field">
+  <label class="label">Name</label>
+  <div class="control">
+    <input class="input is-primary" type="text" name="Title" placeholder="Enter Movie Title">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Link</label>
+  <div class="control">
+    <input class="input is-link" type="url" name="url" placeholder="Enter the YouTube Link"/>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Dead Link</label>
+  <div class="control">
+    <input class="input is-danger" type="text" name="deadlink" placeholder="Enter the Dead link Movie Title">
+  </div>
+</div>
+
+<div class="field is-grouped is-grouped-centered">
+  <div class="control">
+    <button class="button is-link" type="submit">Submit</button>
+  </div>
+</div>
+</form>
+<!--TagLine-->
+<blockquote class="has-background-danger-light has-text-danger has-text-centered"> A Free Movie & Series Library made of Youtube links.</blockquote>
+<!--CARDS-->
+<div class="card p-3" id="AnimeClick">
+  <img idclass="card-image image"src="Assets/Anime.webp">
+  <p class="card-header card-header-title is-centered">Anime</p>
+</div>
+<ul class="list p-4" id="Anime">
+          <li><a href="https://www.youtube.com/playlist?list=PLxSscENEp7JglGq-5PMtbewK96Z_7Au8J">No Game No Life</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLwLSw1_eDZl2XdtLhB9NG2Ch050jWFm9G">One Punch Man</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLBbpS-7tdYhmRHMKDlTLDIZUaCEpI6_07">Steins Gate Japanese</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PL-VvAGonZgj0inZsD9PbvDlHkDBK8z2NK">Steins Gate English</a></li>
+          <li><a href="https://www.youtube.com/watch?v=JMqmHu5iFwo">The Garden Of Words</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ORml7Tpreh0">5 Centimeters Per Second</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLwLSw1_eDZl28iypqyY3tsSz7P1BByLiK">Hyouka</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VKuuoNrM3Y0">Children Who Chase Lost Voices</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PL1BQECDiJyv684h87UogC-DJURCCm7YaF">Tsurezure Children Japanese</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PL7aeElE8LtGyG1g40JrX0J--RfiLB33u3">Tsurezure Children English</a></li>
+          <li><a href="https://www.youtube.com/watch?v=RtuzcwtTXlE">Grave Of The Fireflies</a></li>
+          <li><a href="https://www.youtube.com/watch?v=N0nqH7eYLpo">A Silent Voice English</li>
+          <li><a href="https://www.youtube.com/watch?v=usnQ_QzlMOg">I Want To Eat Your Pancreas Japanese</li>
+          <li><a href="https://www.youtube.com/watch?v=wRObeOdQQug">I Want To Eat Your Pancreas Hindi</li>
+          <li><a href="https://www.youtube.com/watch?v=So75upU3WWA">I Want To Eat Your Pancreas Bengali</li>
+          <li><a href="https://www.youtube.com/watch?v=8VDz9M1dp0w">The Place Promised In Our Early Days English</li>
+          <li><a href="https://www.youtube.com/watch?v=9ZNZxaf3pWA">Fireworks</li>
+          <li><a href="https://www.youtube.com/watch?v=1-sCHskE8R8">Her Blue Sky</li>
+          <li><a href="https://www.youtube.com/watch?v=kMfY7l8E7qQ">Naruto : The Last</li>
+          <li><a href="https://www.youtube.com/playlist?list=PLxSscENEp7JjAnuR364t-jBwsAaVxuFI-">Code Geass Lelouch Of The Rebellion</li>
+          <li><a href="https://www.youtube.com/playlist?list=PLwLSw1_eDZl0_movujO4K0xYOAG9soPjH">Re:ZERO Starting Life in Another World</li>
+          <li><a href="https://www.youtube.com/playlist?list=PLFGTFEvs67k7ILLqU7ASNKM9EXnXcc88H">Tokyo Ghoul</li>
+          <li><a href="https://www.youtube.com/playlist?list=PL-wY8dKh9yrcBqg0vqJzq8984faQr2IUZ">Berserk 1997 Japanese</li>
+          <li><a href="https://www.youtube.com/playlist?list=PL-4Xhq6KseUepmUZwfwG0Ca_dClP9tOUN">Berserk 1997 English</li>
+          <li><a href=""></li>
+          <li><a href=""></li>
+          <li><a href=""></li>
+</ul>
+<div class="card p-3">
+  <img class="card-image image"src="Assets/English.webp">
+  <p class="card-header card-header-title is-centered">English</p>
+</div>
+<div class="card p-3">
+  <img class="card-image image"src="Assets/Hindi.webp">
+  <p class="card-header card-header-title is-centered">Hindi</p>
+</div>
+
+
+<!--Version Info-->
+<div class="tags has-addons p-1 is-centered">
+  <span class="tag">YTFLIX</span>
+  <span class="tag is-danger is-light">v0.621</span>
+</div>
+<script src="bulma.js" type="text/javascript" charset="utf-8"></script>
 </body>
+
 </html>

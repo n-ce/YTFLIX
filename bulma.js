@@ -61,3 +61,9 @@ checkBox.addEventListener('change', function() {
     window.localStorage.setItem('data-theme', 'light');
   }
 });
+
+//CARDS
+document.getElementById("AnimeClick").onclick = function() { myFunction1() };
+function myFunction1() {
+  document.querySelector('#Anime').classList.toggle("show");
+}
