@@ -1,7 +1,10 @@
 body {
   height: 100vh;
   }
-
+h1{
+  background-color: crimson;
+  color:white;;
+}
 .link {
   background-color:crimson;
   padding:0.75rem;
@@ -10,8 +13,7 @@ body {
   border-radius: 50%;
   box-shadow: 0 0 0.75rem crimson;
 }
-
-h1,label,h2,blockquote{
+label,h2,blockquote{
   color: crimson;
 }
 
@@ -41,7 +43,9 @@ html,.uk-search-input {
   padding:1.5rem 1.5rem 0 1.5rem;
 }
 
-.uk-card,.uk-modal-body{border-radius:1rem}
+.uk-card,.uk-modal-body{border-radius:1rem;
+  box-shadow:0 0 0.75rem grey;
+}
 
 p.uk-text-italic{
   background-color: #00000040;
