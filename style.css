@@ -3,13 +3,15 @@ body {
   }
 
 .link {
-  float: left;
-  width: 25%;
+  background-color:crimson;
+  padding:0.75rem;
+  color:white;
+  margin:0 1rem 1rem 1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0.75rem crimson;
 }
-h1,
-label,
-.link,h2,
-blockquote,p.uk-text-italic{
+
+h1,label,h2,blockquote{
   color: crimson;
 }
 
@@ -17,26 +19,34 @@ input[type="checkbox"] {
   display: none;
 }
 
-p {
+p,h4{
   color: white;
 }
 
-label,
-form {
+label,form {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-html,
-.uk-search-input {
+.uk-modal-body{
+  background-color: #00000099;
+}
+
+html,.uk-search-input {
   background-color: #00000000;
   text-align:center;
 }
 .uk-padding{
   padding:1.5rem 1.5rem 0 1.5rem;
 }
-.uk-card{border-radius:1rem}
+
+.uk-card,.uk-modal-body{border-radius:1rem}
+
+p.uk-text-italic{
+  background-color: #00000040;
+}
+
 @media screen and (orientation: landscape) {
   #Gallery {
     display: flex;
