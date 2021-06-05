@@ -48,9 +48,12 @@ p.uk-text-italic{
 }
 
 @media screen and (orientation: landscape) {
-  #Gallery {
+  
+  #grid1,#grid2{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content:center;
   }
+  .uk-card{width:40vw;}
 }
