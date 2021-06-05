@@ -31,6 +31,7 @@ form {
 html,
 .uk-search-input {
   background-color: #00000000;
+  text-align:center;
 }
 .uk-padding{
   padding:1.5rem 1.5rem 0 1.5rem;
