@@ -3,7 +3,13 @@ body {
   }
 h1{
   background-color: crimson;
-  color:white;;
+  color:white;
+  box-shadow: 0 0.1rem 0.5rem gray;
+}
+blockquote{
+  background-color: #FF436745;
+  margin: 1rem;
+  border-radius: 1rem;
 }
 .link {
   background-color:crimson;
