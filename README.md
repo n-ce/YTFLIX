@@ -16,4 +16,5 @@ Anyone can add content links by clicking the plus icon available at the navbar i
 An new Category "Originals" is to be added in the upcoming releases containing a list of Officially Released Content on YouTube, such as the movie "Samadhi", "AlphaGo", "PodCasts" & documentaries.
 
 ## Notice
-The Bulma Branch is a lighter implementation of ytflix, but is still considered to be unstable, do not fork the main branch then merge into Bulma or vice versa. It creates massive inconsistencies. The Bulma Page is live at https://n-ce.github.io/ytflix
+The Dev Branch should be Considered for Pull Requests.
+The Bulma Branch is a lighter implementation of ytflix, and is being simultaneously developed, do not fork the main branch then merge into Bulma or vice versa. It creates massive inconsistencies.
