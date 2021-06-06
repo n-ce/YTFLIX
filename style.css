@@ -8,7 +8,8 @@ h1{
 }
 blockquote{
   background-color: #FF436745;
-  margin: 1rem;
+  margin: 1rem 1.5rem 1rem 1.5rem;
+  padding: 0 1rem 0 1rem;
   border-radius: 1rem;
 }
 .link {
