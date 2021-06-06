@@ -9,17 +9,19 @@ h1{
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-right: 4rem;
 }
 img{
   height:4.5rem;
   margin:-0.75rem 0 -0.75rem 0;
 }
 blockquote{
+  padding: 0 1rem 0 1rem;
   background-color: #FF436745;
   margin: 1rem 1.5rem 1rem 1.5rem;
-  padding: 0 1rem 0 1rem;
   border-radius: 1rem;
 }
+
 .link {
   background-color:crimson;
   padding:0.75rem;
@@ -31,6 +33,7 @@ blockquote{
 label,h2,blockquote{
   color: crimson;
 }
+
 
 input[type="checkbox"] {
   display: none;
