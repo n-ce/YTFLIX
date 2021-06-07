@@ -14,9 +14,9 @@ Each category consists of a list of names which are links to youtube videos.
 #### Links
 Anyone can add content links by clicking the plus icon available at the navbar in the site, sending both the title and url at https://ytflix.netlify.app/
 Or directly sending pull requests to the Dev branch with updated links.
-#### Main Branch
+#### Main Branch [https://ytflix.netlify.app]
 This is the Production Branch, it gets code directly from the Dev branch upon review if everything works and nowhere else.
-#### Dev Branch
+#### Dev Branch [https://n-ce.github.io/YTFLIX]
 This is the developer Branch, it gets all the code commits and pull requests. This is the one to fork.
 
 ## Future
