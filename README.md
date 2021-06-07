@@ -10,14 +10,14 @@ Each category consists of a list of names which are links to youtube videos.
 ## Screenshots
 ![](Assets/Screenshots/1.png)
 ![](Assets/Screenshots/2.png)
-## Contributing
+## Contribution & Info
+### Links
 Anyone can add content links by clicking the plus icon available at the navbar in the site, sending both the title and url at https://ytflix.netlify.app/
 Or directly sending pull requests to the Dev branch with updated links.
+### Main Branch
+This is the Production Branch, it gets code directly from the Dev branch upon review if everything works and nowhere else.
+### Dev
+This is the developer Branch, it gets all the code commits and pull requests. This is the one to fork.
+
 ## Future
 An new Category "Originals" is to be added in the upcoming releases containing a list of Officially Released Content on YouTube, such as the movie "Samadhi", "AlphaGo", "PodCasts" & documentaries.
-
-## Notice
-The Bulma Branch is a lighter implementation of ytflix, but is still considered to be unstable, do not fork the main branch then merge into Bulma or vice versa. It creates massive inconsistencies. Only Branch to be forked is the Dev Branch.
-
-The Dev Branch is the one to create pull requests at. It is live at 
-https://n-ce.github.io/YTFLIX
