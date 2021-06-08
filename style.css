@@ -1,0 +1,46 @@
+body {
+  height: 100vh;
+  }
+
+.link {
+  float: left;
+  width: 25%;
+}
+h1,
+label,
+.link,h2,
+blockquote,p.uk-text-italic{
+  color: crimson;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+p {
+  color: white;
+}
+
+label,
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html,
+.uk-search-input {
+  background-color: #00000000;
+}
+.uk-padding{
+  padding:1.5rem 1.5rem 0 1.5rem;
+}
+.uk-card{border-radius:1rem}
+@media screen and (orientation: landscape) {
+  #Gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
