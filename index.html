@@ -5,7 +5,7 @@
     <meta name="description" content="An English, Indian, Anime Series and Movie Content library built upon YouTube links. ">
     <meta name="keywords" content="Youtube,Movies,Series,Free">
     <meta name="author" content="Animesh Nath">
-    <meta name="theme-color" content="crimson">
+    <meta name="theme-color" content="#333333">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>YTFLIX</title>
     <link rel="icon" href="Assets/Icons/maskable_icon.png"/>
@@ -16,16 +16,15 @@
 </head>
 <body class="uk-text-center">
 	
-	<h1 uk-sticky><img src="Assets/Icons/Main.svg">YTFLIX</h1>
-	
+	<div class="nav" uk-sticky>
+	  <h2><img src="Assets/Icons/Main.svg">YTFLIX</h2>
+	  <a class="link"href="#modal-center" uk-toggle uk-icon="icon: info"></a>
+	  <a class="link"href="https://github.com/n-ce/YTFLIX" uk-icon="icon: github"></a>
+	  <a class="link"href="#post" uk-toggle uk-icon="icon: plus-circle"></a>
+	  <label class="link" uk-icon="icon: paint-bucket"><input class="uk-checkbox" type="checkbox" onclick="darkmode()"/></label>
+	 </div>
+	<br />
 	<blockquote> A Free Movie & Series Library made of Youtube links.</blockquote>
-	
-	<div>
-		<a class="link"href="#modal-center" uk-toggle uk-icon="icon: info"></a>
-		<a class="link"href="https://github.com/n-ce/YTFLIX" uk-icon="icon: github"></a>
-		<a class="link"href="#post" uk-toggle uk-icon="icon: plus-circle"></a>
-		<label class="link" uk-icon="icon: paint-bucket"><input class="uk-checkbox" type="checkbox" onclick="darkmode()"></label>
-	</div>
 	
 	<div id="post" class="uk-flex-top" uk-modal>
 	  <form data-netlify="true" name='Post' method='POST' class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
@@ -47,50 +46,39 @@
 	</div>
 	<br>
 	
-	<div id="Gallery">
-	<div id="grid1">
-	<div class="uk-padding">
-	  <a href="Categories/Originals.html">
-	    <div class="uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/Originals.webp)">
+	<div class="G uk-child-width-1-2@s" uk-grid>
+	  
+	  <div class="uk-padding">
+	    <a href="Categories/Originals.html" class="uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/Originals.webp)">
 	      <h3 class="uk-card-title uk-text-bolder">Originals</h3>
 	      <p class="uk-text-italic">Watch Officialy Released Movies & Documentaries on Youtube</p>
-	    </div>
-	  </a>
-	</div>
+	     </a>
+	   </div>
+	   
+	  <div class="uk-padding">
+	    <a href="Categories/Anime.html" class=" uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/Anime.webp)">
+	      <h3 class="uk-card-title uk-text-bolder">Anime</h3>
+	      <p class="uk-text-italic">Watch Anime Movies and Series from Youtube in Japanese & English</p>
+	     </a>
+	   </div>
 	  
-	<div class="uk-padding">
-		<a href="Categories/Anime.html">
-			<div class=" uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/Anime.webp)">
-			  <h3 class="uk-card-title uk-text-bolder">Anime</h3>
-			  <p class="uk-text-italic">Watch Anime Movies and Series from Youtube in Japanese & English</p>
-			</div>
-		</a>
-	</div>
-	</div>
-	<div id="grid2">
-	<div class="uk-padding">
-		 <a href="Categories/English.html">
-		   <div class=" uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/English.webp)">
-		      <h3 class="uk-card-title uk-text-bolder">English</h3>
-		      <p class="uk-text-italic">Watch Hollywood & Global Content from Youtube in English & Hindi Dubbed</p>
-		    </div>
-		  </a>
-		</div>
-		
-		<div class="uk-padding">
-			<a href="Categories/Hindi.html">
-			  <div class="uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/Hindi.webp)">
-			    <h3 class="uk-card-title uk-text-bolder">Hindi</h3>
-			    <p class="uk-text-italic">Watch Movies from Bollywood & Hindi Indie Content from Youtube</p>
-			  </div>
-			</a>
-		</div>
-	</div>
-	</div>
-	<br>
-	<span class="uk-badge">v1.5 Avalanche</span>
-	<br>
-	<hr>
+	  <div class="uk-padding">
+	    <a href="Categories/English.html" class=" uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/English.webp)">
+	      <h3 class="uk-card-title uk-text-bolder">English</h3>
+	      <p class="uk-text-italic">Watch Hollywood & Global Content from Youtube in English & Hindi Dubbed</p>
+	     </a>
+	   </div>
+	   
+	  <div class="uk-padding">
+	    <a href="Categories/Hindi.html" class="uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/Hindi.webp)">
+	      <h3 class="uk-card-title uk-text-bolder">Hindi</h3>
+	      <p class="uk-text-italic">Watch Movies from Bollywood & Hindi Indie Content from Youtube</p>
+	     </a>
+	   </div>
+	 
+	 </div>
+	
+	<span class="uk-badge">v1.6 Earthquake</span>
 	<script src="function.js"></script>
 
 </body>
