@@ -42,14 +42,16 @@ return fetch("../Databases/"+Y+".json").then(function (response) {
       appendData(data);
     }).catch(function (err) {
       console.log('error: ' + err);
-    });
+    });;
 }
 
+
 //Loading the list
+
 function appendData(data) {
-  for (var i = 1; i < data.length; i++) {
+  for (var i = 0; i < data.length; i++) {
     var list = document.createElement("li");
     list.innerHTML ='<a href=\"https://youtu.be/'+data[i].URL+'\">'+data[i].Name +'</a>';
-    document.querySelector('ul').appendChild(list);
+  document.getElementsByClassName('uk-list')[0].appendChild(list);
   }
 }
