@@ -1,4 +1,4 @@
-const search = document.querySelector('.uk-search-input');
+const search = document.querySelector('input');
 search.onkeyup=function(){
   let input = search.value;
   input=input.toLowerCase();
