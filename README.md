@@ -1,7 +1,8 @@
 # YTFLIX
-![](https://img.shields.io/github/release/n-ce/YTFLIX.svg)
-![](https://img.shields.io/github/license/n-ce/YTFLIX.svg)
-![](https://img.shields.io/github/languages/code-size/n-ce/YTFLIX.svg)
+![](https://img.shields.io/github/release/n-ce/YTFLIX)
+![](https://img.shields.io/github/license/n-ce/YTFLIX)
+![](https://img.shields.io/github/languages/code-size/n-ce/YTFLIX)
+![](https://img.shields.io/github/repo-size/n-ce/YTFLIX)
 
 YTFLIX is a library of movie and series content available on YouTube. It also enables the user to add content to the library and remove dead links by reporting. The main goal of YTFLIX is to provide the user with simple and clean interface to smoothly search free movies available on youtube.
 
