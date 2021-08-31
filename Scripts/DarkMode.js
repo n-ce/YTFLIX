@@ -6,9 +6,9 @@ function meta(y) {
   return document.querySelector('meta[name="theme-color"]').setAttribute("content", y),body.backgroundColor = nav.backgroundColor = y;
 }
 if (theme == 'dark'){
-  meta("black");
+  meta("black");}
   checkBox.checked = theme == 'dark' ? true : false;
-	}
+	
 checkBox.onchange=function() {
   if (checkBox.checked==true) {
     meta("black");
