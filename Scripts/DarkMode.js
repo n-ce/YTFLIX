@@ -5,11 +5,11 @@ var nav = document.querySelector('.nav').style;
 function meta(y) {
   return document.querySelector('meta[name="theme-color"]').setAttribute("content", y);
 }
-if (theme == 'dark')
+if (theme == 'dark'){
   meta("black");
   body.backgroundColor = nav.backgroundColor = "black";
   checkBox.checked = theme == 'dark' ? true : false;
-	
+	}
 checkBox.onchange=function() {
   if (checkBox.checked==true) {
     meta("black");
