@@ -66,6 +66,7 @@ p.uk-text-italic{
 .uk-padding {
   animation: boom 750ms ;
 }
+li{animation: slide 0.5s ease-in-out;}
 @keyframes boom{
   0%{transform: scale(0)}
 }
@@ -73,4 +74,10 @@ p.uk-text-italic{
   0%{
     transform: translateY(-100vh);
   }
+}
+@keyframes slide{
+  0%{
+transform:translateX(-100vw);
+opacity:0;
+    }
 }

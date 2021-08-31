@@ -3,7 +3,7 @@ var theme = window.localStorage.getItem('data-theme');
 var body = document.body.style;
 var nav = document.querySelector('.nav').style;
 function meta(y) {
-  return document.querySelector('meta[name="theme-color"]').setAttribute("content", y),body.backgroundColor = y,nav.backgroundColor = y,    window.localStorage.setItem('data-theme', y);
+  return document.querySelector('meta[name="theme-color"]').setAttribute("content", y),body.backgroundColor = nav.backgroundColor = y,    window.localStorage.setItem('data-theme', y);
 }
 if (theme == "black"){
   meta("black");
