@@ -1,8 +1,8 @@
 //DARK MODE
-var checkBox = document.querySelector('input');
+var checkBox = document.querySelector('.uk-checkbox');
 var theme = window.localStorage.getItem('data-theme');
 var body = document.body.style;
-var nav = document.querySelector('.nav').style;
+var nav = document.querySelector('nav').style;
 function meta(y) {
   return document.querySelector('meta[name="theme-color"]').setAttribute("content", y),body.backgroundColor = nav.backgroundColor = y,window.localStorage.setItem('data-theme', y);
 }
@@ -15,12 +15,12 @@ checkBox.onclick=function() {
     meta("black");
   }else{
     meta("#333333");
-    body.backgroundColor = "white";
+    body.backgroundColor="white";
   }
 }
 
 //SEARCH
-const search = document.querySelector("input");
+const search = document.querySelector(".uk-search-input");
 search.onkeyup=function(){
   let input = search.value;
   input=input.toLowerCase();
@@ -45,13 +45,46 @@ return fetch("../Databases/"+Y+".json").then(function (response) {
     });;
 }
 
+//Click Detection
+var countO=countA=countE=countH=1;
+var b = undefined;
+var li=document.querySelectorAll('li');
+li[0].onclick=function(){
+  countO++;
+  if(countO%2==0){a = 0;b=undefined}
+  else{b=0}
+}
+li[1].onclick = function() {
+  countA++;
+  if(countA%2==0){a = 1;b=undefined}
+  else{b = 1;}
+}
+li[2].onclick = function() {
+  countE++;
+  if(countE%2==0){a = 2;b=undefined}
+  else{b=2;}
+}
+li[3].onclick = function() {
+  countH++;
+  if(countH%2==0){a = 3;b=undefined}
+  else{b = 3;}
+}
 
+//Remove the added list
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+}
 //Loading the list
-
+var addlist = document.querySelectorAll('.uk-list');
 function appendData(data) {
-  for (var i = 0; i < data.length; i++) {
+ for (var i = 0; i < data.length; i++) {
     var list = document.createElement("li");
     list.innerHTML ='<a href=\"https://youtu.be/'+data[i].URL+'\">'+data[i].Name +'</a>';
-  document.getElementsByClassName('uk-list')[0].appendChild(list);
+    addlist[a].appendChild(list);
+    if(b!=undefined){
+    console.log(b);
+    removeAllChildNodes(addlist[b]);}
   }
 }

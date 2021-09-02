@@ -26,4 +26,3 @@ Each category consists of a list of names that are links to youtube videos.
 ## Contributing
 Anyone can add content links by clicking the plus icon available at the navbar in the site, sending both the title and URL at https://ytflix.netlify.app/
 Or directly sending pull requests to the main branch with updated links dressed as JSON objects.
--[Abhishek Alekar](https://github.com/abhishekalekar)
