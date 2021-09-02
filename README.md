@@ -4,7 +4,8 @@
 ![](https://img.shields.io/github/license/n-ce/YTFLIX)
 ![](https://img.shields.io/github/languages/code-size/n-ce/YTFLIX)
 ![](https://img.shields.io/github/repo-size/n-ce/YTFLIX)
-<img src="Assets/Icons/Main.svg" height="100"><em>YTFLIX is a library of movie and series content available on YouTube. It also enables the user to add content to the library and remove dead links by reporting. The main goal of YTFLIX is to provide the user with simple and clean interface to smoothly search free movies available on youtube.</em>
+
+<img src="Assets/Icons/Main.svg" width="150"><em>YTFLIX is a library of movie and series content available on YouTube. It also enables the user to add content to the library and remove dead links by reporting. The main goal of YTFLIX is to provide the user with simple and clean interface to smoothly search free movies available on youtube.</em>
 ## Categories
 - Originals
 - Anime
@@ -14,6 +15,7 @@
 Each category consists of a list of names that are links to youtube videos.
 
 ## Screenshots
+As of v1.4
 ![Interface as of v1.4](Assets/Screenshots/1.png)
 ![Interface as of v1.4](Assets/Screenshots/2.png)
 
