@@ -27,3 +27,5 @@ As of v1.4
 ## Contributing
 Anyone can add content links by clicking the plus icon available at the navbar in the site, sending both the title and URL at https://ytflix.netlify.app/
 Or directly sending pull requests to the main branch with updated links dressed as JSON objects.
+Instructions on updating the [databases](https://github.com/n-ce/YTFLIX/tree/main/Databases) : Paste link which comes after the "https://youtube.com/" or "https://youtu.be/" part.
+Your contribution is essential to the project.
