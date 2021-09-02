@@ -1,0 +1,20 @@
+{"short_name":"YTFLIX",
+"icons":[
+	{
+		"src":"Assets/Icons/maskable_icon_x192.webp",
+		"type":"image/webp",
+		"sizes":"192x192",
+		"purpose":"any maskable"
+	},
+	{
+		"src":"Assets/Icons/maskable_icon_x512.webp",
+		"type":"image/webp",
+		"sizes":"512x512",
+		"purpose":"any maskable"
+	}
+	],
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"background_color": "#000000"
+	
+}
