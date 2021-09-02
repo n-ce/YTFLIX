@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="description" content="An English, Indian, Anime Series and Movie Content library built upon YouTube links. ">
     <meta name="keywords" content="Youtube,Movies,Series,Free">
@@ -8,78 +8,131 @@
     <meta name="theme-color" content="#333333">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>YTFLIX</title>
-    <link rel="icon" href="Assets/Icons/maskable_icon.png"/>
+    <link rel="icon" href="Assets/Icons/maskable_icon.webp"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="style.css"/>
-</head>
-<body class="uk-text-center">
-	
-	<div class="nav" uk-sticky>
-	  <h2><img src="Assets/Icons/Main.svg">YTFLIX</h2>
-	  <a class="link"href="#modal-center" uk-toggle uk-icon="icon: info"></a>
-	  <a class="link"href="https://github.com/n-ce/YTFLIX" uk-icon="icon: github"></a>
-	  <a class="link"href="#post" uk-toggle uk-icon="icon: plus-circle"></a>
-	  <label class="link" uk-icon="icon: paint-bucket"><input class="uk-checkbox" type="checkbox"/></label>
-	 </div>
-	<br />
-	<blockquote> A Free Movie & Series Library made of Youtube links.</blockquote>
-	
-	<div id="post" class="uk-flex-top" uk-modal>
-	  <form data-netlify="true" name='Post' method='POST' class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-	    <button class="uk-modal-close-default" type="button" uk-close></button>
-	    <h4>POST MOVIE LINK HERE.</h4>
-	    <p><input class="uk-input" type="text" name="Title" placeholder="Title" /></p>
-	    <p><input class="uk-input" type="url" name="url" placeholder="Link" /></p>
-	    <h4>REPORT BROKEN LINK HERE.</h4>
-	    <p><input class="uk-input" type="text" name="DeadLink" placeholder="Title" /></p>
-	    <p><button class="uk-button uk-button-primary" type="submit">SUBMIT</button></p>
-	  </form>
-	</div>
-		
-	<div id="modal-center" class="uk-flex-top" uk-modal>
-	  <div class=" uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-	    <button class="uk-modal-close-default" type="button" uk-close></button>
-	    <p>YTFLIX is a free and open source website with one goal which is to provide full length movie links from youtube. It has been a solo project so far, it utilizes the UIKIT Framework and is completely coded on a mobile device using Spck Code Editor on Android. Thank you for reading and Share this website to your friends & family.<br><br>@n-ce, Animesh Nath.</p>
-		</div>
-	</div>
-	<br>
-	
-	<div class="G uk-child-width-1-2@s" uk-grid>
-	  
-	  <div class="uk-padding">
-	    <a href="Categories/Originals.html" class="uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/Originals.webp)">
-	      <h3 class="uk-card-title uk-text-bolder">Originals</h3>
-	      <p class="uk-text-italic">Watch Officialy Released Movies & Documentaries on Youtube</p>
-	     </a>
-	   </div>
-	   
-	  <div class="uk-padding">
-	    <a href="Categories/Anime.html" class=" uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/Anime.webp)">
-	      <h3 class="uk-card-title uk-text-bolder">Anime</h3>
-	      <p class="uk-text-italic">Watch Anime Movies and Series from Youtube in Japanese & English</p>
-	     </a>
-	   </div>
-	  
-	  <div class="uk-padding">
-	    <a href="Categories/English.html" class=" uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/English.webp)">
-	      <h3 class="uk-card-title uk-text-bolder">English</h3>
-	      <p class="uk-text-italic">Watch Hollywood & Global Content from Youtube in English & Hindi Dubbed</p>
-	     </a>
-	   </div>
-	   
-	  <div class="uk-padding">
-	    <a href="Categories/Hindi.html" class="uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-background-cover" style="background-image: url(Assets/Hindi.webp)">
-	      <h3 class="uk-card-title uk-text-bolder">Hindi</h3>
-	      <p class="uk-text-italic">Watch Movies from Bollywood & Hindi Indie Content from Youtube</p>
-	     </a>
-	   </div>
-	 
-	 </div>
+  </head>
+  
+  <body class="uk-text-center">
+    <nav uk-navbar uk-sticky>
+      <div class="nav-overlay uk-navbar-left">
+        <img class="uk-navbar-item" src="Assets/Icons/Main.svg">
+        <h2>YTFLIX</h2>
+      </div>
+      <div class="nav-overlay uk-navbar-right">
+        <div class="uk-iconnav">
+          <a uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade"></a>
+          <a uk-toggle="target:#modal-center" uk-icon="icon: info" ></a>
+          <a href="https://github.com/n-ce/YTFLIX" uk-icon="icon: github"></a>
+          <a uk-toggle="target:#post" uk-icon="icon: plus-circle"></a>
+          <label uk-icon="icon: paint-bucket"><input class="uk-checkbox" type="checkbox" /></label>
+        </div>
+      </div>
+      <div class="nav-overlay uk-navbar-left uk-flex-1" hidden>
+        <div class="uk-navbar-item uk-width-expand">
+          <form class="uk-search uk-search-navbar uk-width-1-1">
+            <input class="uk-search-input" type="text" name="search" placeholder="Search" autocomplete="off">
+          </form>
+        </div>
+        <a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+      </div>
+    </nav><br>
+    
+    <blockquote> A Free Movie & Series Library made of Youtube links.</blockquote><br>
+    
+    <ul class="G uk-child-width-1-2@s" uk-accordion uk-grid>
+      <li class="uk-padding">
+        
+        <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-blend-screen uk-text-italic uk-background-cover O" href="#" onclick="parse('Originals')">
+          
+          <h3 class="uk-card-title uk-text-bolder ">Originals</h3>
+          
+          <p>Watch Officialy Released Movies & Documentaries on Youtube</p>
+       
+        </a>
+        
+        <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
+        
+      </li>
+      
+      <li class="uk-padding">
+        
+        <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-blend-screen uk-text-italic uk-background-cover A" href="#" onclick="parse('Anime')">
+          
+          <h3 class="uk-card-title uk-text-bolder">Anime</h3>
+          
+          <p>Watch Anime Movies and Series from Youtube in Japanese & English</p>
+        
+        </a>
+        
+        <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
+      
+      </li>
+      
+      <li class="uk-padding">
+        
+        <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body  uk-background-blend-screen uk-text-italic uk-background-cover E" href="#" onclick="parse('English')">
+          
+          <h3 class="uk-card-title uk-text-bolder">English</h3>
+          
+          <p>Watch Hollywood & Global Content from Youtube in English & Hindi Dubbed</p>
+        
+        </a>
+        
+        <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
+      
+      </li>
+      
+      <li class="uk-padding">
+        
+        <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-secondary uk-background-blend-screen uk-text-italic uk-background-cover H" href="#" onclick="parse('Hindi')">
+          
+          <h3 class="uk-card-title uk-text-bolder">Hindi</h3>
+          
+          <p>Watch Movies from Bollywood & Hindi Indie Content from Youtube</p>
+          
+        </a>
+        
+        <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
+     
+      </li>
+    
+    </ul>
+    
+    <span class="uk-badge">v2.0 Supernova</span>
+    
+    <!--Post & Info buttons -->
+        
+    <div id="post" class="uk-flex-top" uk-modal>
+      <form data-netlify="true" name='Post' method='POST' class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h4>POST MOVIE LINK HERE.</h4>
+        <p>
+          <input class="uk-input" type="text" name="Title" placeholder="Title" />
+        </p>
+        <p>
+          <input class="uk-input" type="url" name="url" placeholder="Link" />
+        </p>
+        <h4>REPORT BROKEN LINK HERE.</h4>
+        <p>
+          <input class="uk-input" type="text" name="DeadLink" placeholder="Title"/>
+        </p>
+        <p><button class="uk-button uk-button-primary" type="submit">SUBMIT</button>
+        </p>
+      </form>
+    </div>
+    
+    <div id="modal-center" class="uk-flex-top" uk-modal>
+      <div class=" uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <p>YTFLIX is a free and open source website with one goal which is to provide full length movie links from youtube. It has been a solo project so far, it utilizes the UIKIT Framework and is completely coded on a mobile device using Spck Code Editor on Android. Thank you for reading and Share this website to your friends & family.<br><br>@n-ce, Animesh Nath.</p>
+      </div>
+    </div>
 
-	<span class="uk-badge">v1.7 Typhoon</span>
-	<script src="Script.js"></script>
-	
-</body>
+    <script src="Script.js"></script>
+  
+  </body>
+  
 </html>
