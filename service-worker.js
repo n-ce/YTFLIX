@@ -3,7 +3,12 @@ const staticLoader = "YTFLIX"
 const assets = [
   "/",
   "index.html",
-  "Assets/Icons/maskable_icon_x512.webp",
+  "script.js",
+  "Assets/Backgrounds/Originals.webp",
+  "Assets/Backgrounds/Anime.webp",
+  "Assets/Backgrounds/English.webp",
+  "Assets/Backgrounds/Hindi.webp",
+  "Assets/Icons/maskable_icon_x192.webp",
   "Assets/Icons/maskable_icon_x512.webp"
 ]
 
