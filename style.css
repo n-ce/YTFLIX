@@ -4,8 +4,6 @@ html,h2,h4,p{
 }
 body{
   height: 100vh;
-  background-image: url("Assets/Backgrounds/body.svg");
-  
 }
 
 nav{
