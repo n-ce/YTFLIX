@@ -15,9 +15,9 @@
 Each category consists of a list of names that are links to youtube videos.
 
 ## Screenshots
-As of v1.4
-![Interface as of v1.4](Assets/Screenshots/1.png)
-![Interface as of v1.4](Assets/Screenshots/2.png)
+As of v2.1
+![](Assets/Screenshots/1.png)
+![](Assets/Screenshots/2.png)
 
 ## Dependencies
 - [JSON SD](https://github.com/n-ce/JSON-static-database)
