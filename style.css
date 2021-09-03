@@ -2,7 +2,11 @@ html,h2,h4,p{
   background-color:transparent;
   color: white;
 }
-body{height: 100vh;}
+body{
+  height: 100vh;
+  background-image: url("Assets/Backgrounds/body.svg");
+  
+}
 
 nav{
   background-color: crimson;
