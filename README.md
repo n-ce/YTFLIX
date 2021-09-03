@@ -16,6 +16,7 @@ Each category consists of a list of names that are links to youtube videos.
 
 ## Screenshots
 As of v2.1
+![](Assets/Screenshots/3.png)
 ![](Assets/Screenshots/1.png)
 ![](Assets/Screenshots/2.png)
 
