@@ -88,3 +88,20 @@ function appendData(data) {
   }
 }
 
+//prefers color scheme
+let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
+
+const setColorScheme = e => {
+  if (e.matches) {
+    
+meta("black");
+checkBox.checked=true;
+  } else {
+meta("crimson");
+body.backgroundColor="white";
+checkBox.checked=false ;
+  }
+}
+
+setColorScheme(colorSchemeQueryList);
+colorSchemeQueryList.addListener(setColorScheme);
