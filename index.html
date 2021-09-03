@@ -5,7 +5,7 @@
     <meta name="description" content="An English, Indian, Anime Series and Movie Content library built upon YouTube links. ">
     <meta name="keywords" content="Youtube,Movies,Series,Free">
     <meta name="author" content="Animesh Nath">
-    <meta name="theme-color" content="#333333">
+    <meta name="theme-color" content="crimson">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" sizes="512x512" href="Assets/Icons/maskable_icon_x512.png" />
@@ -20,10 +20,10 @@
   
   <body class="uk-text-center" onload="UIkit.notification({message: 'Note: Always Close each category after opening before opening another.',status:'danger',pos:'bottom-center'})">
     
-    <nav uk-navbar uk-sticky>
+    <nav uk-navbar uk-sticky class="uk-navbar-container uk-navbar-transparent" >
       <div class="nav-overlay uk-navbar-left">
-        <img class="uk-navbar-item" src="Assets/Icons/Main.svg">
-        <h2>YTFLIX</h2>
+      <img class="uk-navbar-item" src="Assets/Icons/Main.svg">
+      <h2 class="uk-title">YTFLIX</h2>
       </div>
       <div class="nav-overlay uk-navbar-right">
         <div class="uk-iconnav">
@@ -46,7 +46,7 @@
     
     <blockquote> A Free Movie & Series Library made of Youtube links.</blockquote><br>
     
-    <ul class="G uk-child-width-1-2@s" uk-accordion uk-grid>
+    <ul uk-accordion>
       <li class="uk-padding">
         
         <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-blend-screen uk-text-italic uk-background-cover O" href="#" onclick="parse('Originals')">

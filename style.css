@@ -1,8 +1,11 @@
-html{background-color:transparent}
+html,h2,h4,p{
+  background-color:transparent;
+  color: white;
+}
 body{height: 100vh;}
 
 nav{
-  background-color: #333333;
+  background-color: crimson;
   animation:drop 1.25s;
   height:3rem;
 }
@@ -15,28 +18,22 @@ h2{margin: -2.5rem 0 -1rem -1rem}
 .uk-navbar-right{margin-right:1rem;}
 blockquote{
   background-color: #FF436745;
+  color: crimson;
   margin: 1rem 1.5rem 1rem 1.5rem;
   padding: 0 1rem 0 1rem;
   border-radius: 1rem;
   animation: drop 750ms;
 }
-label,h2,blockquote,nav{color: crimson;}
 
 input[type="checkbox"] {display: none;}
 
-p,h4{color: white;}
-
-label,form{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.G{margin-left:1%}
 
 .uk-search-input,.uk-navbar-toggle{
   text-align: center;
   margin-top: -2rem;
+  color:white;
 }
+.uk-search-input::placeholder{color: gainsboro}
 
 
 .uk-modal-body{background-color: #00000099;}
@@ -50,7 +47,6 @@ a.uk-text-italic{text-shadow: 0 0 0.5rem black;}
 .uk-badge{margin:1rem 0 2rem 0;}
 
 .uk-padding {
-  color:red;
   animation: boom 750ms ;
 }
 .O{background-image: url("Assets/Backgrounds/Originals.webp");}
