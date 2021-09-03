@@ -8,7 +8,8 @@ body{
 
 nav{
   background-color: crimson;
-  animation:drop 1.25s;
+  -webkit-animation:drop 1.25s;
+          animation:drop 1.25s;
   height:3rem;
 }
 img{
@@ -24,7 +25,8 @@ blockquote{
   margin: 1rem 1.5rem 1rem 1.5rem;
   padding: 0 1rem 0 1rem;
   border-radius: 1rem;
-  animation: drop 750ms;
+  -webkit-animation: drop 750ms;
+          animation: drop 750ms;
 }
 
 input[type="checkbox"] {display: none;}
@@ -35,40 +37,61 @@ input[type="checkbox"] {display: none;}
   margin-top: -2rem;
   color:white;
 }
-.uk-search-input::placeholder{color: gainsboro}
+.uk-search-input::-webkit-input-placeholder, .uk-search-input::-moz-placeholder, .uk-search-input:-ms-input-placeholder, .uk-search-input::-ms-input-placeholder, .uk-search-input::placeholder{color: gainsboro}
 
 
 .uk-modal-body{background-color: #00000099;}
 
 .uk-card,.uk-modal-body{
   border-radius:1rem;
-  box-shadow:0 0 0.75rem grey;
+  -webkit-box-shadow:0 0 0.75rem grey;
+          box-shadow:0 0 0.75rem grey;
 }
 a.uk-text-italic{text-shadow: 0 0 0.5rem black;}
 
 .uk-badge{margin:1rem 0 2rem 0;}
 
 .uk-padding {
-  animation: boom 750ms ;
+  -webkit-animation: boom 750ms ;
+          animation: boom 750ms ;
 }
 .O{background-image: url("Assets/Backgrounds/Originals.webp");}
 .A{background-image: url("Assets/Backgrounds/Anime.webp");}
 .E{background-image: url("Assets/Backgrounds/English.webp");}
 .H{background-image: url("Assets/Backgrounds/Hindi.webp");}
 
-li{animation: slide 0.5s ease-in-out;}
+li{-webkit-animation: slide 0.5s ease-in-out;animation: slide 0.5s ease-in-out;}
+
+@-webkit-keyframes boom{
+  0%{-webkit-transform: scale(0);transform: scale(0)}
+}
 
 @keyframes boom{
-  0%{transform: scale(0)}
+  0%{-webkit-transform: scale(0);transform: scale(0)}
+}
+@-webkit-keyframes drop{
+  0%{
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+  }
 }
 @keyframes drop{
   0%{
-    transform: translateY(-100vh);
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
   }
+}
+@-webkit-keyframes slide{
+  0%{
+    -webkit-transform:translateX(-50vw);
+            transform:translateX(-50vw);
+    opacity:0;
+    }
 }
 @keyframes slide{
   0%{
-    transform:translateX(-50vw);
+    -webkit-transform:translateX(-50vw);
+            transform:translateX(-50vw);
     opacity:0;
     }
 }
