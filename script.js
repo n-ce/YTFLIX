@@ -80,7 +80,7 @@ var addlist = document.querySelectorAll('.uk-list');
 function appendData(data) {
  for (var i = 0; i < data.length; i++) {
     var list = document.createElement("li");
-    list.innerHTML ='<a href=\"https://youtube.com/'+data[i].URL+'\">'+data[i].Name +'</a>';
+    list.innerHTML ='<a href=\"https://youtube.com/watch?v='+data[i].URL+'\">'+data[i].Name +'</a>';
     addlist[a].appendChild(list);
     if(b!=undefined){
     console.log(b);
