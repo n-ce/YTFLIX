@@ -20,7 +20,7 @@ As of v2.1
 ![](Assets/Screenshots/1.png)
 ![](Assets/Screenshots/2.png)
 
-## Dependencies
+## Repos Used
 - [JSON SD](https://github.com/n-ce/JSON-static-database)
 - [Sea-Arch](https://github.com/n-ce/Sea-Arch)
 - [DarkMode](https://github.com/n-ce/DarkMode)
