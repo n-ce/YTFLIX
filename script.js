@@ -5,13 +5,15 @@ var nav = document.querySelector('nav').style;
 function meta(y) {
   return document.querySelector('meta[name="theme-color"]').setAttribute("content", y),body.backgroundColor = nav.backgroundColor = y,window.localStorage.setItem('data-theme', y);
 }
-if (window.localStorage.getItem('data-theme') == "black"){
-  meta("black");
+if (window.localStorage.getItem('data-theme') == "#353639"){
+  meta("#353639");
+  body.backgroundColor="#121212"; 
   checkBox.checked = true;
 }
 checkBox.onclick=function() {
   if (checkBox.checked==true) {
-    meta("black");
+    meta("#353639");
+    body.backgroundColor="#121212"; 
   }else{
     meta("crimson");
     body.backgroundColor="white";
@@ -94,7 +96,8 @@ let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 const setColorScheme = e => {
   if (e.matches) {
     
-meta("black");
+meta("#353639");
+    body.backgroundColor="#121212"; 
 checkBox.checked=true;
   } else {
 meta("crimson");
