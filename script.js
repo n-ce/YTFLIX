@@ -3,18 +3,42 @@ var checkBox = document.querySelector('.uk-checkbox');
 var body = document.body.style;
 var nav = document.querySelector('nav').style;
 function meta(y) {
-  return document.querySelector('meta[name="theme-color"]').setAttribute("content", y),body.backgroundColor = nav.backgroundColor = y,window.localStorage.setItem('data-theme', y);
+  return document.querySelector('meta[name="theme-color"]').setAttribute("content", y),body.backgroundColor = nav.backgroundColor = y;
 }
+
+//prefers color scheme
+let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
+
+const setColorScheme = e => {
+  if (e.matches) {
+
+    meta("#353639");
+    body.backgroundColor = "#121212";
+    checkBox.checked = true;
+  } else {
+    meta("crimson");
+    body.backgroundColor = "white";
+    checkBox.checked = false;
+  }
+}
+
+setColorScheme(colorSchemeQueryList);
+colorSchemeQueryList.addListener(setColorScheme);
+
+//local storage
 if (window.localStorage.getItem('data-theme') == "#353639"){
+  window.localStorage.setItem('data-theme', "#353639");
   meta("#353639");
   body.backgroundColor="#121212"; 
   checkBox.checked = true;
 }
 checkBox.onclick=function() {
   if (checkBox.checked==true) {
+    window.localStorage.setItem('data-theme', "#353639");
     meta("#353639");
     body.backgroundColor="#121212"; 
   }else{
+    window.localStorage.setItem('data-theme', "crimson");
     meta("crimson");
     body.backgroundColor="white";
   }
@@ -90,21 +114,3 @@ function appendData(data) {
   }
 }
 
-//prefers color scheme
-let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
-
-const setColorScheme = e => {
-  if (e.matches) {
-    
-meta("#353639");
-    body.backgroundColor="#121212"; 
-checkBox.checked=true;
-  } else {
-meta("crimson");
-body.backgroundColor="white";
-checkBox.checked=false ;
-  }
-}
-
-setColorScheme(colorSchemeQueryList);
-colorSchemeQueryList.addListener(setColorScheme);
