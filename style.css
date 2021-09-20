@@ -46,9 +46,9 @@ input[type="checkbox"] {display: none;}
 
 .uk-card,.uk-modal-body{
   border-radius:1rem;
-  border: 0.1rem solid crimson;
+  box-shadow: 0 0.2rem 1rem 0.3rem #1f1f1f50;
+  text-shadow: 0 0 1rem black;
 }
-a.uk-text-italic{text-shadow: 0 0 1rem black;}
 
 .uk-badge{margin:1rem 0 2rem 0;}
 
