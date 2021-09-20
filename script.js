@@ -12,7 +12,7 @@ let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 const setColorScheme = e => {
   if (e.matches) {
 
-    meta("#353639");
+    meta("#1f1f1f");
     body.backgroundColor = "#121212";
     checkBox.checked = true;
   } else {
@@ -26,16 +26,16 @@ setColorScheme(colorSchemeQueryList);
 colorSchemeQueryList.addListener(setColorScheme);
 
 //local storage
-if (window.localStorage.getItem('data-theme') == "#353639"){
-  window.localStorage.setItem('data-theme', "#353639");
-  meta("#353639");
+if (window.localStorage.getItem('data-theme') == "#1f1f1f"){
+  window.localStorage.setItem('data-theme', "#1f1f1f");
+  meta("#1f1f1f");
   body.backgroundColor="#121212"; 
   checkBox.checked = true;
 }
 checkBox.onclick=function() {
   if (checkBox.checked==true) {
-    window.localStorage.setItem('data-theme', "#353639");
-    meta("#353639");
+    window.localStorage.setItem('data-theme', "#1f1f1f");
+    meta("#1f1f1f");
     body.backgroundColor="#121212"; 
   }else{
     window.localStorage.setItem('data-theme', "crimson");
@@ -70,47 +70,72 @@ return fetch("../Databases/"+Y+".json").then(function (response) {
     });;
 }
 
-//Click Detection
-var countO=countA=countE=countH=1;
-var b = undefined;
-var li=document.querySelectorAll('li');
-li[0].onclick=function(){
-  countO++;
-  if(countO%2==0){a = 0;b=undefined}
-  else{b=0}
-}
-li[1].onclick = function() {
-  countA++;
-  if(countA%2==0){a = 1;b=undefined}
-  else{b = 1;}
-}
-li[2].onclick = function() {
-  countE++;
-  if(countE%2==0){a = 2;b=undefined}
-  else{b=2;}
-}
-li[3].onclick = function() {
-  countH++;
-  if(countH%2==0){a = 3;b=undefined}
-  else{b = 3;}
-}
+var addlist = document.querySelectorAll('.uk-list');
 
-//Remove the added list
-function removeAllChildNodes(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
+//Click Detection
+var countO=countA=countE=countH=0;
+
+var li = document.querySelectorAll('li');
+
+li[0].onclick=function(){
+  if(countO%2==0){
+    countO++;
+    a = 0;
+    parse('Originals');
+  }
+  else{
+    countO--;
+    while (addlist[0].hasChildNodes()) {
+      addlist[0].removeChild(addlist[0].firstChild);
+    }
   }
 }
+li[1].onclick = function() {
+  if (countA % 2 == 0) {
+    countA++;
+    a = 1;
+    parse('Anime');
+  }
+  else {
+    countA--;
+    while (addlist[1].hasChildNodes()) {
+      addlist[1].removeChild(addlist[1].firstChild);
+    }
+  }
+}
+li[2].onclick = function() {
+  if (countE % 2 == 0) {
+    countE++;
+    a = 2;
+    parse('English');
+  }
+  else {
+    countE--;
+    while (addlist[2].hasChildNodes()) {
+      addlist[2].removeChild(addlist[2].firstChild);
+    }
+  }
+}
+li[3].onclick = function() {
+  if (countH % 2 == 0) {
+    countH++;
+    a = 3;
+    parse('Hindi');
+  }
+  else {
+    countH--;
+    while (addlist[3].hasChildNodes()) {
+      addlist[3].removeChild(addlist[3].firstChild);
+    }
+  }
+}
+
 //Loading the list
-var addlist = document.querySelectorAll('.uk-list');
+
 function appendData(data) {
  for (var i = 0; i < data.length; i++) {
     var list = document.createElement("li");
     list.innerHTML ='<a href=\"https://youtube.com/'+data[i].URL+'\">'+data[i].Name +'</a>';
     addlist[a].appendChild(list);
-    if(b!=undefined){
-    console.log(b);
-    removeAllChildNodes(addlist[b]);}
-  }
+ }
 }
-

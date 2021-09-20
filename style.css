@@ -17,6 +17,7 @@ img{
 h2{margin: -2.5rem 0 -1rem -1rem}
 
 .uk-navbar-right{margin-right:1rem;}
+
 blockquote{
   background-color: #FF436745;
   color: crimson;
@@ -27,7 +28,7 @@ blockquote{
   
 nav,blockquote{
   -webkit-animation: drop 750ms;
-          animation: drop 750ms;
+  animation: drop 750ms;
 }
 
 input[type="checkbox"] {display: none;}
@@ -45,8 +46,7 @@ input[type="checkbox"] {display: none;}
 
 .uk-card,.uk-modal-body{
   border-radius:1rem;
-  -webkit-box-shadow:0 0 2rem #7778;
-          box-shadow:0 0 2rem #7778;
+  border: 0.1rem solid crimson;
 }
 a.uk-text-italic{text-shadow: 0 0 1rem black;}
 
@@ -54,7 +54,7 @@ a.uk-text-italic{text-shadow: 0 0 1rem black;}
 
 .uk-padding,li{
   -webkit-animation: boom 750ms ;
-          animation: boom 750ms ;
+  animation: boom 750ms ;
 }
 .O{background-image: url("Assets/Backgrounds/Originals.webp");}
 .A{background-image: url("Assets/Backgrounds/Anime.webp");}
@@ -73,12 +73,12 @@ h3{margin-left:2rem}
 @-webkit-keyframes drop{
   0%{
     -webkit-transform: translateY(-100vh);
-            transform: translateY(-100vh);
+    transform: translateY(-100vh);
   }
 }
 @keyframes drop{
   0%{
     -webkit-transform: translateY(-100vh);
-            transform: translateY(-100vh);
+    transform: translateY(-100vh);
   }
 }
