@@ -32,4 +32,4 @@ As of v2.1
 - [Formify](https://github.com/n-ce/Formify)
 
 
-## [CONTRIBUTION GUIDEILINES](CONTRIBUTING.md)
+## [CONTRIBUTION GUIDELINES 🤝](CONTRIBUTING.md)
