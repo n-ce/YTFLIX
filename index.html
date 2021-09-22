@@ -20,6 +20,8 @@
   
   <body class="uk-text-center">
     
+    <!-- NAVIGATION BAR -->
+    
     <nav uk-navbar uk-sticky class="uk-navbar-container uk-navbar-transparent" >
       <div class="nav-overlay uk-navbar-left">
       <img class="uk-navbar-item" src="Assets/Icons/Main.svg">
@@ -46,7 +48,12 @@
     
     <blockquote> A Free Movie & Series Library made of Youtube links.</blockquote><br>
     
+    <!-- CATEGORIES -->
+    
     <ul uk-accordion>
+          
+          <!-- ORIGINALS -->
+          
       <li class="uk-padding">
         
         <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover O" href="#" >
@@ -61,6 +68,8 @@
         
       </li>
       
+          <!-- ANIME -->
+          
       <li class="uk-padding">
         
         <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover A" href="#">
@@ -74,6 +83,8 @@
         <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
       
       </li>
+      
+          <!-- ENGLISH -->
       
       <li class="uk-padding">
         
@@ -89,6 +100,8 @@
       
       </li>
       
+          <!-- HINDI -->
+      
       <li class="uk-padding">
         
         <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover H" href="#">
@@ -102,6 +115,8 @@
         <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
      
       </li>
+      
+          <!-- KOREAN -->
       
       <li class="uk-padding">
         
@@ -119,9 +134,11 @@
     
     </ul>
     
+    <!-- VERSION CONTROL TAG -->
+        
     <span class="uk-badge">v2.2 Thunder</span>
     
-    <!--Post & Info buttons -->
+    <!-- POSTING & REPORTING -->
         
     <div id="post" class="uk-flex-top" uk-modal>
       <form data-netlify="true" name='Post' method='POST' class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
@@ -142,12 +159,17 @@
       </form>
     </div>
     
+    <!-- ABOUT -->
+    
     <div id="modal-center" class="uk-flex-top" uk-modal>
       <div class=" uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
         <button class="uk-modal-close-default" type="button" uk-close></button>
         <p>YTFLIX is a free and open source website with one goal which is to provide full length movie links from youtube. It has been a solo project so far, it utilizes the UIKIT Framework and is completely coded on a mobile device using Spck Code Editor on Android. Thank you for reading and Share this website to your friends & family.<br><br>@n-ce, Animesh Nath.</p>
       </div>
     </div>
+    
+    <!-- MAIN SCRIPT & PWA SERVICE WORKER-->
+        
     <script src="script.js"></script>
     <script src="service-worker.js"></script>
   </body>

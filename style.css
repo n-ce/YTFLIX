@@ -7,7 +7,7 @@ p {
 }
 
 body {
-  height: 100vh;
+  height: 100%;
 }
 
 nav {
@@ -38,8 +38,8 @@ blockquote {
 
 nav,
 blockquote {
-  -webkit-animation: drop 750ms;
-  animation: drop 750ms;
+  -webkit-animation: drop 0.4s;
+  animation: drop 0.4s;
 }
 
 input[type="checkbox"] {
@@ -59,7 +59,7 @@ input[type="checkbox"] {
 .uk-search-input:-ms-input-placeholder,
 .uk-search-input::-ms-input-placeholder,
 .uk-search-input::placeholder {
-  color: gainsboro
+  color: gainsboro;
 }
 
 
@@ -78,10 +78,14 @@ input[type="checkbox"] {
   margin: 1rem 0 2rem 0;
 }
 
-.uk-padding,
-li {
+.uk-padding {
   -webkit-animation: boom 750ms;
   animation: boom 750ms;
+}
+
+li {
+  -webkit-animation: slide 0.5s;
+  animation: slide 0.5s;
 }
 
 .O {
@@ -124,14 +128,30 @@ h3 {
 
 @-webkit-keyframes drop {
   0% {
-    -webkit-transform: translateY(-100vh);
-    transform: translateY(-100vh);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
   }
 }
 
 @keyframes drop {
   0% {
-    -webkit-transform: translateY(-100vh);
-    transform: translateY(-100vh);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity:0;
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 0;
   }
 }
