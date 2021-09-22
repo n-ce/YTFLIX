@@ -1,83 +1,136 @@
-html,h2,h4,p{
-  background-color:transparent;
+html,
+h2,
+h4,
+p {
+  background-color: transparent;
   color: white;
 }
-body{
+
+body {
   height: 100vh;
 }
 
-nav{
+nav {
   background-color: crimson;
-  height:3rem;
+  height: 3rem;
 }
-img{
-  height:1rem;
-  margin:-0.5rem -1rem 0 0;
+
+img {
+  height: 1rem;
+  margin: -0.5rem -1rem 0 0;
 }
-h2{margin: -2.5rem 0 -1rem -1rem}
 
-.uk-navbar-right{margin-right:1rem;}
+h2 {
+  margin: -2.5rem 0 -1rem -1rem
+}
 
-blockquote{
+.uk-navbar-right {
+  margin-right: 1rem;
+}
+
+blockquote {
   background-color: #FF436745;
   color: crimson;
   margin: 1rem 1.5rem 1rem 1.5rem;
   padding: 0 1rem 0 1rem;
   border-radius: 1rem;
-} 
-  
-nav,blockquote{
+}
+
+nav,
+blockquote {
   -webkit-animation: drop 750ms;
   animation: drop 750ms;
 }
 
-input[type="checkbox"] {display: none;}
+input[type="checkbox"] {
+  display: none;
+}
 
 
-.uk-search-input,.uk-navbar-toggle{
+.uk-search-input,
+.uk-navbar-toggle {
   text-align: center;
   margin-top: -2rem;
-  color:white;
+  color: white;
 }
-.uk-search-input::-webkit-input-placeholder, .uk-search-input::-moz-placeholder, .uk-search-input:-ms-input-placeholder, .uk-search-input::-ms-input-placeholder, .uk-search-input::placeholder{color: gainsboro}
+
+.uk-search-input::-webkit-input-placeholder,
+.uk-search-input::-moz-placeholder,
+.uk-search-input:-ms-input-placeholder,
+.uk-search-input::-ms-input-placeholder,
+.uk-search-input::placeholder {
+  color: gainsboro
+}
 
 
-.uk-modal-body{background-color: #0009;}
+.uk-modal-body {
+  background-color: #0009;
+}
 
-.uk-card,.uk-modal-body{
-  border-radius:1rem;
+.uk-card,
+.uk-modal-body {
+  border-radius: 1rem;
   box-shadow: 0 0.2rem 1rem 0.3rem #1f1f1f50;
   text-shadow: 0 0 1rem black;
 }
 
-.uk-badge{margin:1rem 0 2rem 0;}
-
-.uk-padding,li{
-  -webkit-animation: boom 750ms ;
-  animation: boom 750ms ;
-}
-.O{background-image: url("Assets/Backgrounds/Originals.webp");}
-.A{background-image: url("Assets/Backgrounds/Anime.webp");}
-.E{background-image: url("Assets/Backgrounds/English.webp");}
-.H{background-image: url("Assets/Backgrounds/Hindi.webp");}
-
-h3{margin-left:2rem}
-
-@-webkit-keyframes boom{
-  0%{-webkit-transform: scale(0);transform: scale(0)}
+.uk-badge {
+  margin: 1rem 0 2rem 0;
 }
 
-@keyframes boom{
-  0%{-webkit-transform: scale(0);transform: scale(0)}
+.uk-padding,
+li {
+  -webkit-animation: boom 750ms;
+  animation: boom 750ms;
 }
-@-webkit-keyframes drop{
-  0%{
+
+.O {
+  background-image: url("Assets/Backgrounds/Originals.webp");
+}
+
+.A {
+  background-image: url("Assets/Backgrounds/Anime.webp");
+}
+
+.E {
+  background-image: url("Assets/Backgrounds/English.webp");
+}
+
+.H {
+  background-image: url("Assets/Backgrounds/Hindi.webp");
+}
+
+.K {
+  background-image: url("Assets/Backgrounds/Korean.webp");
+}
+
+h3 {
+  margin-left: 2rem
+}
+
+@-webkit-keyframes boom {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0)
+  }
+}
+
+@keyframes boom {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0)
+  }
+}
+
+@-webkit-keyframes drop {
+  0% {
     -webkit-transform: translateY(-100vh);
     transform: translateY(-100vh);
   }
 }
-@keyframes drop{
-  0%{
+
+@keyframes drop {
+  0% {
     -webkit-transform: translateY(-100vh);
     transform: translateY(-100vh);
   }

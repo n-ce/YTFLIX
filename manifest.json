@@ -1,20 +1,21 @@
-{"short_name":"YTFLIX",
-"icons":[
-	{
-		"src":"Assets/Icons/maskable_icon_x192.png",
-		"type":"image/png",
-		"sizes":"192x192",
-		"purpose":"any maskable"
+{
+  "short_name": "YTFLIX",
+  "icons": [
+    {
+      "src": "Assets/Icons/maskable_icon_x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
 	},
-	{
-		"src":"Assets/Icons/maskable_icon_x512.png",
-		"type":"image/png",
-		"sizes":"512x512",
-		"purpose":"any maskable"
+    {
+      "src": "Assets/Icons/maskable_icon_x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
 	}
 	],
-	"start_url": "index.html",
-	"display": "standalone",
-	"background_color": "#333333"
-	
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#333333"
+
 }

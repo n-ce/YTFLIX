@@ -73,7 +73,7 @@ return fetch("../Databases/"+Y+".json").then(function (response) {
 var addlist = document.querySelectorAll('.uk-list');
 
 //Click Detection
-var countO=countA=countE=countH=0;
+var countO=countA=countE=countH=countK=0;
 
 var li = document.querySelectorAll('li');
 
@@ -126,6 +126,19 @@ li[3].onclick = function() {
     countH--;
     while (addlist[3].hasChildNodes()) {
       addlist[3].removeChild(addlist[3].firstChild);
+    }
+  }
+}
+li[4].onclick = function() {
+  if (countK % 2 == 0) {
+    countK++;
+    a = 4;
+    parse('Korean');
+  }
+  else {
+    countK--;
+    while (addlist[4].hasChildNodes()) {
+      addlist[4].removeChild(addlist[4].firstChild);
     }
   }
 }
