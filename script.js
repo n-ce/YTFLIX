@@ -2,8 +2,9 @@
 var checkBox = document.querySelector('.uk-checkbox');
 var body = document.body.style;
 var nav = document.querySelector('nav').style;
+
 function meta(y) {
-  return document.querySelector('meta[name="theme-color"]').setAttribute("content", y),body.backgroundColor = nav.backgroundColor = y;
+  return document.querySelector('meta[name="theme-color"]').setAttribute("content", y), body.backgroundColor = nav.backgroundColor = y;
 }
 
 //prefers color scheme
@@ -26,64 +27,64 @@ setColorScheme(colorSchemeQueryList);
 colorSchemeQueryList.addListener(setColorScheme);
 
 //local storage
-if (window.localStorage.getItem('data-theme') == "#1f1f1f"){
+if (window.localStorage.getItem('data-theme') == "#1f1f1f") {
   window.localStorage.setItem('data-theme', "#1f1f1f");
   meta("#1f1f1f");
-  body.backgroundColor="#121212"; 
+  body.backgroundColor = "#121212";
   checkBox.checked = true;
 }
-checkBox.onclick=function() {
-  if (checkBox.checked==true) {
+checkBox.onclick = function() {
+  if (checkBox.checked == true) {
     window.localStorage.setItem('data-theme', "#1f1f1f");
     meta("#1f1f1f");
-    body.backgroundColor="#121212"; 
-  }else{
+    body.backgroundColor = "#121212";
+  } else {
     window.localStorage.setItem('data-theme', "crimson");
     meta("crimson");
-    body.backgroundColor="white";
+    body.backgroundColor = "white";
   }
 }
 
 //SEARCH
 const search = document.querySelector(".uk-search-input");
-search.onkeyup=function(){
+search.onkeyup = function() {
   let input = search.value;
-  input=input.toLowerCase();
+  input = input.toLowerCase();
   let x = document.querySelectorAll('li');
   for (i = 0; i < x.length; i++) {
     if (!x[i].innerHTML.toLowerCase().includes(input)) {
-      x[i].style.display="none";
-    }else {
-      x[i].style.display="list-item";
+      x[i].style.display = "none";
+    } else {
+      x[i].style.display = "list-item";
     }
   }
 }
 
 //FETCH DATA
-function parse(Y){
-return fetch("../Databases/"+Y+".json").then(function (response) {
-      return response.json();
-    }).then(function (data) {
-      appendData(data);
-    }).catch(function (err) {
-      console.log('error: ' + err);
-    });;
+function parse(Y) {
+  return fetch("../Databases/" + Y + ".json").then(function(response) {
+    return response.json();
+  }).then(function(data) {
+    appendData(data);
+  }).catch(function(err) {
+    console.log('error: ' + err);
+  });;
 }
 
 var addlist = document.querySelectorAll('.uk-list');
 
 //Click Detection
-var countO=countA=countE=countH=countK=0;
+var countO = countA = countE = countH = countK = 0;
 
 var li = document.querySelectorAll('li');
 
-li[0].onclick=function(){
-  if(countO%2==0){
+li[0].onclick = function() {
+  if (countO % 2 == 0) {
     countO++;
     a = 0;
     parse('Originals');
   }
-  else{
+  else {
     countO--;
     while (addlist[0].hasChildNodes()) {
       addlist[0].removeChild(addlist[0].firstChild);
@@ -146,9 +147,9 @@ li[4].onclick = function() {
 //Loading the list
 
 function appendData(data) {
- for (var i = 0; i < data.length; i++) {
+  for (var i = 0; i < data.length; i++) {
     var list = document.createElement("li");
-    list.innerHTML ='<a href=\"https://youtube.com/'+data[i].URL+'\">'+data[i].Name +'</a>';
+    list.innerHTML = '<a href=\"https://youtube.com/' + data[i].URL + '\">' + data[i].Name + '</a>';
     addlist[a].appendChild(list);
- }
+  }
 }

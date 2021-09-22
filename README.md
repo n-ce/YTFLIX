@@ -16,6 +16,7 @@
 - Anime 🟦
 - English 🟩
 - Hindi 🟧
+- Korean 🟪
 
 
 ## Screenshots 🌄
