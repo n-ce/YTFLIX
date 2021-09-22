@@ -66,7 +66,9 @@ input[type="checkbox"] {
 .uk-modal-body {
   background-color: #0009;
 }
-
+.uk-card{
+  user-select: none;
+}
 .uk-card,
 .uk-modal-body {
   border-radius: 0.5rem;
