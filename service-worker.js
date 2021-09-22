@@ -1,7 +1,6 @@
 //Progressive Web App
 const staticLoader = "YTFLIX"
 const assets = [
-  "/",
   "Assets/Icons/maskable_icon_x192.png",
   "Assets/Icons/maskable_icon_x512.png"
 ]
