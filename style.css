@@ -1,3 +1,9 @@
+html,body {
+  height: 100%;
+  margin:0;
+}
+
+
 html,
 h2,
 h4,
@@ -6,34 +12,33 @@ p {
   color: white;
 }
 
-body {
-  height: 100%;
-}
-
 nav {
   background-color: crimson;
   height: 3rem;
 }
 
+span{
+  display: none;
+}
 img {
   height: 1rem;
   margin: -0.5rem -1rem 0 0;
 }
 
 h2 {
-  margin: -2.5rem 0 -1rem -1rem
+  margin: -2.5rem 0 -1rem -1rem;
 }
 
-.uk-navbar-right {
-  margin-right: 1rem;
+.uk-navbar-right,.uk-navbar-left {
+  margin: auto;
 }
 
 blockquote {
   background-color: #FF436745;
   color: crimson;
-  margin: 1rem 1.5rem 1rem 1.5rem;
+  margin: 1rem 2rem 1rem 2rem;
   padding: 0 1rem 0 1rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 nav,
@@ -54,14 +59,6 @@ input[type="checkbox"] {
   color: white;
 }
 
-.uk-search-input::-webkit-input-placeholder,
-.uk-search-input::-moz-placeholder,
-.uk-search-input:-ms-input-placeholder,
-.uk-search-input::-ms-input-placeholder,
-.uk-search-input::placeholder {
-  color: gainsboro;
-}
-
 
 .uk-modal-body {
   background-color: #0009;
@@ -69,7 +66,7 @@ input[type="checkbox"] {
 
 .uk-card,
 .uk-modal-body {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   box-shadow: 0 0.2rem 1rem 0.3rem #1f1f1f50;
   text-shadow: 0 0 1rem black;
 }
@@ -78,10 +75,6 @@ input[type="checkbox"] {
   margin: 1rem 0 2rem 0;
 }
 
-.uk-padding {
-  -webkit-animation: boom 750ms;
-  animation: boom 750ms;
-}
 
 li {
   -webkit-animation: slide 0.5s;
@@ -112,19 +105,6 @@ h3 {
   margin-left: 2rem
 }
 
-@-webkit-keyframes boom {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0)
-  }
-}
-
-@keyframes boom {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0)
-  }
-}
 
 @-webkit-keyframes drop {
   0% {
@@ -154,4 +134,12 @@ h3 {
     transform: translateX(-100%);
     opacity: 0;
   }
+}
+
+@media (orientation:landscape){
+  #info,#post,#github,#dark{
+    margin: 0 0 0.2rem 1rem
+    ;
+  }
+  span{display:inline ;}
 }

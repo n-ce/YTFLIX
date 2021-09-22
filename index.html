@@ -29,17 +29,17 @@
       </div>
       <div class="nav-overlay uk-navbar-right">
         <div class="uk-iconnav">
-          <a uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade"></a>
-          <a uk-toggle="target:#modal-center" uk-icon="icon: info" ></a>
-          <a href="https://github.com/n-ce/YTFLIX" uk-icon="icon: github"></a>
-          <a uk-toggle="target:#post" uk-icon="icon: plus-circle"></a>
-          <label uk-icon="icon: paint-bucket"><input class="uk-checkbox" type="checkbox" /></label>
+          <a id="search" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade"><span>Search </span></a>
+          <a id="info" uk-toggle="target:#modal-center" uk-icon="icon: info" ><span>Info </span></a>
+          <a id="github" href="https://github.com/n-ce/YTFLIX" uk-icon="icon: github"><span>Github </span></a>
+          <a id="post" uk-toggle="target:#post" uk-icon="icon: plus-circle"><span>Post </span></a>
+          <label id="dark" uk-icon="icon: paint-bucket"><input class="uk-checkbox" type="checkbox" /><span>Dark Mode </span></label>
         </div>
       </div>
       <div class="nav-overlay uk-navbar-left uk-flex-1" hidden>
         <div class="uk-navbar-item uk-width-expand">
           <form class="uk-search uk-search-navbar uk-width-1-1">
-            <input class="uk-search-input" type="text" name="search" placeholder="Search" autocomplete="off">
+            <input class="uk-search-input" type="text" name="search" autocomplete="off">
           </form>
         </div>
         <a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
@@ -50,17 +50,17 @@
     
     <!-- CATEGORIES -->
     
-    <ul uk-accordion>
+    <ul class="uk-child-width-1-2@s  uk-padding"  uk-grid >
           
           <!-- ORIGINALS -->
           
-      <li class="uk-padding">
+      <li>
         
         <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover O" href="#" >
           
           <h3 class="uk-card-title uk-text-bolder ">Originals</h3>
           
-          <p>Watch Officialy Released Movies & Documentaries on Youtube</p>
+          <p>Watch Officialy Released Movies & Documentaries.</p>
        
         </a>
         
@@ -70,13 +70,13 @@
       
           <!-- ANIME -->
           
-      <li class="uk-padding">
+      <li>
         
         <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover A" href="#">
           
           <h3 class="uk-card-title uk-text-bolder">Anime</h3>
           
-          <p>Watch Anime Movies and Series from Youtube in Japanese & English</p>
+          <p>Watch Anime and Movies in Japanese & English.</p>
         
         </a>
         
@@ -86,13 +86,13 @@
       
           <!-- ENGLISH -->
       
-      <li class="uk-padding">
+      <li>
         
         <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover E" href="#">
           
           <h3 class="uk-card-title uk-text-bolder">English</h3>
           
-          <p>Watch Hollywood & Global Content from Youtube in English & Hindi Dubbed</p>
+          <p>Watch Hollywood & Global Content in English & Hindi Dubbed.</p>
         
         </a>
         
@@ -102,13 +102,13 @@
       
           <!-- HINDI -->
       
-      <li class="uk-padding">
+      <li>
         
         <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover H" href="#">
           
           <h3 class="uk-card-title uk-text-bolder">Hindi</h3>
           
-          <p>Watch Movies from Bollywood & Hindi Indie Content from Youtube</p>
+          <p>Watch Movies from Bollywood & Hindi Indie Content.</p>
           
         </a>
         
@@ -118,13 +118,13 @@
       
           <!-- KOREAN -->
       
-      <li class="uk-padding">
+      <li>
         
         <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover K" href="#">
           
           <h3 class="uk-card-title uk-text-bolder">Korean</h3>
           
-          <p>Watch South Korean Movies from Youtube</p>
+          <p>Watch South Korean Movies from Youtube.</p>
           
         </a>
         
@@ -136,7 +136,7 @@
     
     <!-- VERSION CONTROL TAG -->
         
-    <span class="uk-badge">v2.2 Thunder</span>
+    <p class="uk-badge">v2.2 Thunder</p>
     
     <!-- POSTING & REPORTING -->
         
