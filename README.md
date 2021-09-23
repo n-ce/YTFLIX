@@ -22,9 +22,9 @@
 ## Screenshots 🌄
 As of v2.2
 
-<img src="Assets/Screenshots/1.png" >
-<img src="Assets/Screenshots/2.png" >
-<img src="Assets/Screenshots/3.png" >
+<div align="center">
+<img src="Assets/Screenshots/1.png" width="30%" >  <img src="Assets/Screenshots/2.png" width="30%" >  <img src="Assets/Screenshots/3.png" width="30%" >
+</div>
 
 As of v2.1
 
