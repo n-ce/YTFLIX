@@ -20,9 +20,16 @@
 
 
 ## Screenshots 🌄
+As of v2.2
+
+<img src="Assets/Screenshots/1.png" >
+<img src="Assets/Screenshots/2.png" >
+<img src="Assets/Screenshots/3.png" >
+
 As of v2.1
-![](Assets/Screenshots/3.png)
-![](Assets/Screenshots/2.png)
+
+<img src="Assets/Screenshots/desktop.png" >
+
 
 ## Software used 🌈
 - [Spck Code Editor [Android]](https://play.google.com/store/apps/details?id=io.spck)
