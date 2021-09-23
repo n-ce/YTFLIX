@@ -1,18 +1,12 @@
-# YTFLIX ✨
-
 <div align="center">
-  <div align="left">
-    <img src="Assets/Icons/maskable_icon_x512.png" width="100">
-  </div>
-  <div align="right">
-    <img src="https://img.shields.io/github/release/n-ce/YTFLIX" width="10%">
-    
-    <img src="https://img.shields.io/github/license/n-ce/YTFLIX" width="10%">
-    
-    <img src="https://img.shields.io/github/languages/code-size/n-ce/YTFLIX" width="10%">
-  </div>
-</div>
 
+<h1> YTFLIX ✨</h1>
+    <img src="Assets/Icons/maskable_icon_x512.png" width="200"><br><br>
+    <img src="https://img.shields.io/github/release/n-ce/YTFLIX">
+    <img src="https://img.shields.io/github/license/n-ce/YTFLIX">
+    <img src="https://img.shields.io/github/languages/code-size/n-ce/YTFLIX">
+</div>
+<br>
 
 - YTFLIX is a library of movie and series content available on YouTube. 
 - It also enables the user to add content to the library and remove dead links without creating any accounts by reporting.
