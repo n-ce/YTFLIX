@@ -17,7 +17,7 @@ const setColorScheme = e => {
     body.backgroundColor = "#121212";
     checkBox.checked = true;
   } else {
-    meta("crimson");
+    meta("#ff4548");
     body.backgroundColor = "white";
     checkBox.checked = false;
   }
@@ -39,8 +39,8 @@ checkBox.onclick = function() {
     meta("#1f1f1f");
     body.backgroundColor = "#121212";
   } else {
-    window.localStorage.setItem('data-theme', "crimson");
-    meta("crimson");
+    window.localStorage.setItem('data-theme', "#ff4548");
+    meta("#ff4548");
     body.backgroundColor = "white";
   }
 }

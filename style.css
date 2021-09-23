@@ -1,20 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 html,
 body {
   height: 100%;
   margin: 0;
+  font-family: Ubuntu, monospace;
 }
 
 
 html,
 h2,
 h4,
-p {
+p,
+h1 {
   background-color: transparent;
   color: white;
 }
 
 nav {
-  background-color: crimson;
+  background-color: #ff4548;
   height: 3rem;
 }
 
@@ -22,23 +26,20 @@ span {
   display: none;
 }
 
-img {
-  height: 1rem;
-  margin: -0.5rem -1rem 0 0;
-}
 
-h2 {
-  margin: -2.5rem 0 -1rem -1rem;
-}
-
-.uk-navbar-right,
-.uk-navbar-left {
+.uk-navbar-left,
+.uk-navbar-right {
   margin: auto;
 }
 
+.uk-search-input::placeholder {
+  color: #fff7;
+}
+
+
 blockquote {
-  background-color: #FF436745;
-  color: crimson;
+  background-color: #FF454845;
+  color: #ff4548;
   margin: 1rem 2rem 1rem 2rem;
   padding: 0 1rem 0 1rem;
   border-radius: 0.5rem;
@@ -64,11 +65,13 @@ input[type="checkbox"] {
 
 
 .uk-modal-body {
-  background-color: #0009;
+  background-color: #c11a;
 }
-.uk-card{
+
+.uk-card {
   user-select: none;
 }
+
 .uk-card,
 .uk-modal-body {
   border-radius: 0.5rem;
@@ -77,6 +80,7 @@ input[type="checkbox"] {
 }
 
 .uk-badge {
+  background-color: #ff4548;
   margin: 1rem 0 2rem 0;
 }
 

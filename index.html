@@ -1,177 +1,125 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="An English, Indian, Anime Series and Movie Content library built upon YouTube links. ">
-    <meta name="keywords" content="Youtube,Movies,Series,Free">
-    <meta name="author" content="Animesh Nath">
-    <meta name="theme-color" content="crimson">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" sizes="512x512" href="Assets/Icons/maskable_icon_x512.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="Assets/Icons/maskable_icon_x192.png" />
-    <link rel="manifest" href="manifest.json" />
-    <title>YTFLIX</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  
-  <body class="uk-text-center">
-    
-    <!-- NAVIGATION BAR -->
-    
-    <nav uk-navbar uk-sticky class="uk-navbar-container uk-navbar-transparent" >
-      <div class="nav-overlay uk-navbar-left">
-      <img class="uk-navbar-item" src="Assets/Icons/Main.svg">
-      <h2 class="uk-title">YTFLIX</h2>
-      </div>
-      <div class="nav-overlay uk-navbar-right">
-        <div class="uk-iconnav">
-          <a id="search" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade"><span>Search </span></a>
-          <a id="info" uk-toggle="target:#modal-center" uk-icon="icon: info" ><span>Info </span></a>
-          <a id="github" href="https://github.com/n-ce/YTFLIX" uk-icon="icon: github"><span>Github </span></a>
-          <a id="post" uk-toggle="target:#post" uk-icon="icon: plus-circle"><span>Post </span></a>
-          <label id="dark" uk-icon="icon: paint-bucket"><input class="uk-checkbox" type="checkbox" /><span>Dark Mode </span></label>
-        </div>
-      </div>
-      <div class="nav-overlay uk-navbar-left uk-flex-1" hidden>
-        <div class="uk-navbar-item uk-width-expand">
-          <form class="uk-search uk-search-navbar uk-width-1-1">
-            <input class="uk-search-input" type="text" name="search" autocomplete="off">
-          </form>
-        </div>
-        <a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade" ></a>
-      </div>
-    </nav><br>
-    
-    <blockquote> A Free Movie & Series Library made of Youtube links.</blockquote><br>
-    
-    <!-- CATEGORIES -->
-    
-    <ul class="uk-child-width-1-2@s  uk-padding"  uk-grid >
-          
-          <!-- ORIGINALS -->
-          
-      <li>
-        
-        <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover O"  >
-          
-          <h3 class="uk-card-title uk-text-bolder ">Originals</h3>
-          
-          <p>Watch Officialy Released Movies & Documentaries.</p>
-       
-        </a>
-        
-        <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
-        
-      </li>
-      
-          <!-- ANIME -->
-          
-      <li>
-        
-        <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover A" >
-          
-          <h3 class="uk-card-title uk-text-bolder">Anime</h3>
-          
-          <p>Watch Anime and Movies in Japanese & English.</p>
-        
-        </a>
-        
-        <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
-      
-      </li>
-      
-          <!-- ENGLISH -->
-      
-      <li>
-        
-        <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover E" >
-          
-          <h3 class="uk-card-title uk-text-bolder">English</h3>
-          
-          <p>Watch Hollywood & Global Content in English & Hindi Dubbed.</p>
-        
-        </a>
-        
-        <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
-      
-      </li>
-      
-          <!-- HINDI -->
-      
-      <li>
-        
-        <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover H" >
-          
-          <h3 class="uk-card-title uk-text-bolder">Hindi</h3>
-          
-          <p>Watch Movies from Bollywood & Hindi Indie Content.</p>
-          
-        </a>
-        
-        <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
-     
-      </li>
-      
-          <!-- KOREAN -->
-      
-      <li>
-        
-        <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover K" >
-          
-          <h3 class="uk-card-title uk-text-bolder">Korean</h3>
-          
-          <p>Watch South Korean Movies from Youtube.</p>
-          
-        </a>
-        
-        <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
-     
-      </li>
-    
-    </ul>
-    
-    <!-- VERSION CONTROL TAG -->
-        
-    <p class="uk-badge">v2.2 Thunder</p>
-    
-    <!-- POSTING & REPORTING -->
-        
-    <div id="post" class="uk-flex-top" uk-modal>
-      <form data-netlify="true" name='Post' method='POST' class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-        <h4>POST MOVIE LINK HERE.</h4>
-        <p>
-          <input class="uk-input" type="text" name="Title" placeholder="Title" />
-        </p>
-        <p>
-          <input class="uk-input" type="url" name="url" placeholder="Link" />
-        </p>
-        <h4>REPORT BROKEN LINK HERE.</h4>
-        <p>
-          <input class="uk-input" type="text" name="DeadLink" placeholder="Title"/>
-        </p>
-        <p><button class="uk-button uk-button-primary" type="submit">SUBMIT</button>
-        </p>
-      </form>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <!-- SEO TAGS -->
+  <meta name="description" content="An English, Indian, Anime Series and Movie Content library built upon YouTube links. ">
+  <meta name="keywords" content="Youtube,Movies,Series,Free">
+  <meta name="author" content="Animesh Nath">
+  <title>YTFLIX</title>
+  <!-- App Tags -->
+  <meta name="theme-color" content="crimson">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="512x512" href="Assets/Icons/maskable_icon_x512.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="Assets/Icons/maskable_icon_x192.png" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="uk-text-center">
+  <!-- NAVIGATION BAR -->
+  <nav uk-navbar uk-sticky class="uk-navbar-container uk-navbar-transparent">
+    <div class="nav-overlay uk-navbar-left">
+      <h1><b>YTFLIX</b></h1>
     </div>
-    
-    <!-- ABOUT -->
-    
-    <div id="modal-center" class="uk-flex-top" uk-modal>
-      <div class=" uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-        <p>YTFLIX is a free and open source website with one goal which is to provide full length movie links from youtube. It has been a solo project so far, it utilizes the UIKIT Framework and is completely coded on a mobile device using Spck Code Editor on Android. Thank you for reading and Share this website to your friends & family.<br><br>@n-ce, Animesh Nath.</p>
+    <div class="nav-overlay uk-navbar-right">
+      <div class="uk-iconnav">
+        <a id="search" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade"><span>Search </span></a>
+        <a id="info" uk-toggle="target:#modal-center" uk-icon="icon: info"><span>Info </span></a>
+        <a id="github" href="https://github.com/n-ce/YTFLIX" uk-icon="icon: github"><span>Github </span></a>
+        <a id="post" uk-toggle="target:#post" uk-icon="icon: plus-circle"><span>Post </span></a>
+        <label id="dark" uk-icon="icon: paint-bucket"><input class="uk-checkbox" type="checkbox" /><span>Dark Mode </span></label>
       </div>
     </div>
-    
-    <!-- MAIN SCRIPT & PWA SERVICE WORKER-->
-        
-    <script src="script.js"></script>
-    <script src="service-worker.js"></script>
-  </body>
-  
+    <div class="nav-overlay uk-navbar-left uk-flex-1" hidden>
+      <div class="uk-navbar-item uk-width-expand">
+        <form class="uk-search uk-search-navbar uk-width-1-1">
+          <input class="uk-search-input" type="text" name="search" placeholder="SEARCH" autocomplete="off">
+        </form>
+      </div>
+      <a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade"></a>
+    </div>
+  </nav><br>
+  <blockquote> A Free Movie & Series Library made of Youtube links.</blockquote><br>
+  <!-- CATEGORIES -->
+  <ul class="uk-child-width-1-2@s  uk-padding" uk-grid>
+    <!-- ORIGINALS -->
+    <li>
+      <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover O">
+        <h3 class="uk-card-title uk-text-bolder ">Originals</h3>
+        <p>Watch Officialy Released Movies & Documentaries.</p>
+      </a>
+      <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
+    </li>
+    <!-- ANIME -->
+    <li>
+      <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover A">
+        <h3 class="uk-card-title uk-text-bolder">Anime</h3>
+        <p>Watch Anime and Movies in Japanese & English.</p>
+      </a>
+      <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
+    </li>
+    <!-- ENGLISH -->
+    <li>
+      <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover E">
+        <h3 class="uk-card-title uk-text-bolder">English</h3>
+        <p>Watch Hollywood & Global Content in English & Hindi Dubbed.</p>
+      </a>
+      <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
+    </li>
+    <!-- HINDI -->
+    <li>
+      <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover H">
+        <h3 class="uk-card-title uk-text-bolder">Hindi</h3>
+        <p>Watch Movies from Bollywood & Hindi Indie Content.</p>
+      </a>
+      <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
+    </li>
+    <!-- KOREAN -->
+    <li>
+      <a class="uk-accordion-title uk-card uk-light uk-card-hover uk-card-body uk-background-cover K">
+        <h3 class="uk-card-title uk-text-bolder">Korean</h3>
+        <p>Watch South Korean Movies from Youtube.</p>
+      </a>
+      <ul class="uk-accordion-content uk-list uk-list-large uk-list-divider"></ul>
+    </li>
+  </ul>
+  <!-- VERSION CONTROL TAG -->
+  <p class="uk-badge">v2.2 Thunder</p>
+  <!-- POSTING & REPORTING -->
+  <div id="post" class="uk-flex-top" uk-modal>
+    <form data-netlify="true" name='Post' method='POST' class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <h4>POST MOVIE LINK HERE.</h4>
+      <p>
+        <input class="uk-input" type="text" name="Title" placeholder="Title" />
+      </p>
+      <p>
+        <input class="uk-input" type="url" name="url" placeholder="Link" />
+      </p>
+      <h4>REPORT BROKEN LINK HERE.</h4>
+      <p>
+        <input class="uk-input" type="text" name="DeadLink" placeholder="Title" />
+      </p>
+      <p><button class="uk-button uk-button-primary" type="submit">SUBMIT</button>
+      </p>
+    </form>
+  </div>
+  <!-- ABOUT -->
+  <div id="modal-center" class="uk-flex-top" uk-modal>
+    <div class=" uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <p>YTFLIX is a free and open source website with one goal which is to provide full length movie links from youtube. It has been a solo project so far, it utilizes the UIKIT Framework and is completely coded on a mobile device using Spck Code Editor on Android. Thank you for reading and Share this website to your friends & family.<br><br>@n-ce, Animesh Nath.</p>
+    </div>
+  </div>
+  <!-- MAIN SCRIPT & PWA SERVICE WORKER-->
+  <script src="script.js"></script>
+  <script src="service-worker.js"></script>
+</body>
+
 </html>
