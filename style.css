@@ -37,12 +37,12 @@ span {
 }
 
 
+
 blockquote {
   background-color: #FF454845;
   color: #ff4548;
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 1rem 1.87rem 1rem 1.87rem;
   padding: 0 1rem 0 1rem;
-  border-radius: 0.5rem;
 }
 
 nav,
@@ -65,18 +65,17 @@ input[type="checkbox"] {
 
 
 .uk-modal-body {
-  background-color: #c11a;
+  background: radial-gradient(transparent, black)
 }
 
 .uk-card {
   user-select: none;
 }
 
-.uk-card,
-.uk-modal-body {
-  border-radius: 0.5rem;
-  box-shadow: 0 0.2rem 1rem 0.3rem #1f1f1f50;
-  text-shadow: 0 0 1rem black;
+#text,
+.uk-card {
+  color: white;
+  text-shadow: 0 0 0.5rem #000;
 }
 
 .uk-badge {
@@ -90,25 +89,7 @@ li {
   animation: slide 0.5s;
 }
 
-.O {
-  background-image: url("Assets/Backgrounds/Originals.webp");
-}
 
-.A {
-  background-image: url("Assets/Backgrounds/Anime.webp");
-}
-
-.E {
-  background-image: url("Assets/Backgrounds/English.webp");
-}
-
-.H {
-  background-image: url("Assets/Backgrounds/Hindi.webp");
-}
-
-.K {
-  background-image: url("Assets/Backgrounds/Korean.webp");
-}
 
 h3 {
   margin-left: 2rem
