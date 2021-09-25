@@ -32,7 +32,8 @@ span {
   margin: auto;
 }
 
-.uk-search-input::placeholder {
+.uk-search-input::-webkit-input-placeholder,
+.uk-search-input::-moz-placeholder,.uk-search-input:-ms-input-placeholder,.uk-search-input::-ms-input-placeholder,.uk-search-input::placeholder {
   color: #fff7;
 }
 
@@ -65,11 +66,15 @@ input[type="checkbox"] {
 
 
 .uk-modal-body {
+  background: -o-radial-gradient(transparent, black);
   background: radial-gradient(transparent, black)
 }
 
 .uk-card {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #text,
