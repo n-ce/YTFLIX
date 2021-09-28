@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: Ubuntu, monospace;
 }
-
+body{display:none;}
 
 html,
 h2,
