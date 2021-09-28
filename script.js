@@ -1,13 +1,6 @@
-// Preloader
-
+//DARK MODE
 var body = document.body.style;
 
-function load(){
-  body.display="block";
-  document.getElementById('Preloader').style.display="none";
-}
-
-//DARK MODE
 var checkBox = document.querySelector('.uk-checkbox');
 
 var nav = document.querySelector('nav').style;
