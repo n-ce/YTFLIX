@@ -36,10 +36,10 @@ As of v2.1
 ## Software used 🌈
 - [Spck Code Editor [Android]](https://play.google.com/store/apps/details?id=io.spck)
 - [UIKIT Framework](https://github.com/uikit/uikit)
-- [JSON SD](https://github.com/n-ce/Archive/JSON-static-database)
-- [Sea-Arch](https://github.com/n-ce/Archive/Sea-Arch)
-- [DarkMode](https://github.com/n-ce/Archive/DarkMode)
-- [Formify](https://github.com/n-ce/Archive/Formify)
+- [JSON SD](https://github.com/n-ce/Archive/tree/main/JSON-static-database)
+- [Sea-Arch](https://github.com/n-ce/Archive/tree/main/Sea-Arch)
+- [DarkMode](https://github.com/n-ce/Archive/tree/main/DarkMode)
+- [Formify](https://github.com/n-ce/Archive/tree/main/Formify)
 
 
 ## [CONTRIBUTION GUIDELINES 🤝](CONTRIBUTING.md)
