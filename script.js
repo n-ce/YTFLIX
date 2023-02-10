@@ -57,12 +57,13 @@ search.onkeyup = function() {
 
 //FETCH DATA
 function parse(i) {
-  fetch("../Databases/" + ['Originals', 'Anime', 'English', 'Hindi', 'Korean'][i] + ".json")
-    .then(res => res.json())
+  fetch("https://raw.githubusercontent.com/wiki/n-ce/YTFLIX/" + ['Originals', 'Anime', 'English', 'Hindi', 'Korean'][i] + ".md")
+    .then(res => res.text())
     .then(data => {
-      for (let i = 0; i < data.length; i++) {
+      const json = JSON.parse(data.slice(3));
+      for (let i = 0; i < json.length; i++) {
         const list = document.createElement("li");
-        list.innerHTML = '<a href=\"https://youtube.com/' + data[i].URL + '\">' + data[i].Name + '</a>';
+        list.innerHTML = '<a href=\"https://youtube.com/' + json[i].URL + '\">' + json[i].Name + '</a>';
         addlist[a].appendChild(list);
       }
     })
@@ -81,11 +82,11 @@ for (let i = 0; i < 5; i++) {
 
     if (count[i]) parse(i, a = i)
     else {
-      
+
       while (addlist[i].hasChildNodes()) {
         addlist[i].removeChild(addlist[i].firstChild)
       }
-      
+
     }
     count[i] = !count[i];
   }

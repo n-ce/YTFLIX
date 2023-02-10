@@ -14,9 +14,9 @@
 ### Via Site
 - Adding Links via the + button in the site.
 - Reporting Dead Links via the + button in the site.
-### Via Git
-- Send a pull request with an updated database.
-- Instructions on updating the [json files.](https://github.com/n-ce/YTFLIX/tree/main/Databases)
+### Via Github
+- Directly editing through [wiki](https://github.com/n-ce/YTFLIX/wiki/).
+- Instructions on updating the [json files.](https://github.com/n-ce/YTFLIX/wiki/)
   - Have a numerical id, Name, Link.
   - Link format - > Paste part of the link which comes after `https://youtube.com/`
 - In case of adding a new database file
