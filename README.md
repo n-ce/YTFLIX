@@ -26,11 +26,10 @@ _They follow a simple & easy JSON format!_
 
 
 ### Screenshots 🌄
-As of v2.2
 
 <div align="center">
-<img src="Assets/Screenshots/portrait.avif" width="30%" >
-<img src="Assets/Screenshots/desktop.avif" width="70%" >
+<img src="Assets/Screenshots/portrait.avif" width="36%" >
+<img src="Assets/Screenshots/landscape.avif" width="62%" >
 </div>
 
 ### Software used 🌈
