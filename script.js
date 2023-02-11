@@ -1,12 +1,10 @@
-const categoryBtn = document.querySelectorAll('li');
 //DARK MODE
 const checkBox = document.querySelector('.uk-checkbox');
-const nav = document.querySelector('nav').style;
 
 function theme(navColor, bodyColor) {
   document.querySelector('meta[name="theme-color"]').setAttribute("content", navColor);
+  document.querySelector('nav').style.backgroundColor = navColor;
   document.body.style.backgroundColor = bodyColor;
-  nav.backgroundColor = navColor;
 }
 
 //prefers color scheme
@@ -41,39 +39,38 @@ checkBox.onclick = function() {
 }
 
 //SEARCH
-const search = document.querySelector(".uk-search-input");
 
-search.onkeyup = function() {
-  for (const i of categoryBtn)
-    !i.innerHTML.toLowerCase()
-    .includes(search.value.toLowerCase()) ?
-    i.style.display = "none" :
-    i.style.display = "list-item";
-
+document.querySelector(".uk-search-input").onkeyup = function() {
+  for (const x of document.querySelectorAll('li'))
+    !x.innerHTML.toLowerCase().includes(this.value.toLowerCase()) ?
+    x.style.display = "none" :
+    x.style.display = "list-item";
 }
 
 //FETCH DATA
 const addlist = document.querySelectorAll('.uk-list');
 const categories = ['Originals', 'Anime', 'English', 'Hindi', 'Korean'];
-const categoryClosed = [true, true, true, true, true];
+const categoryHidden = [true, true, true, true, true];
 
 categories.forEach((v, i) => {
-  categoryBtn[i].onclick = function() {
-    if (categoryClosed[i]) {
-      fetch(`https://raw.githubusercontent.com/wiki/n-ce/YTFLIX/${v}.md`)
-        .then(res => res.text())
-        .then(text => { // ⬇️ converts markdown to json
-          for (const v of JSON.parse(text.slice(3))) {
-            const list = document.createElement("li");
-            list.innerHTML = `<a href="https://youtube.com/${v.URL}">${v.Name}</a>`;
-            addlist[i].appendChild(list);
-          }
-        })
-        .catch(err => alert(err))
-    } else {
-      while (addlist[i].hasChildNodes())
-        addlist[i].removeChild(addlist[i].firstChild)
-    }
-    categoryClosed[i] = !categoryClosed[i];
+
+  fetch(`https://raw.githubusercontent.com/wiki/n-ce/YTFLIX/${v}.md`)
+    .then(res => res.text())
+    .then(text => { // ⬇️ converts markdown to json
+      for (const x of JSON.parse(text.slice(3))) {
+        const list = document.createElement("li");
+        list.innerHTML = `<a href="https://youtube.com/${x.URL}">${x.Name}</a>`;
+        addlist[i].appendChild(list);
+      }
+    })
+    .catch(err => alert(err));
+
+  addlist[i].style.display = 'none';
+
+  document.querySelectorAll('li')[i].onclick = function() {
+    categoryHidden[i] ?
+      addlist[i].style.display = 'block' :
+      addlist[i].style.display = 'none';
+    categoryHidden[i] = !categoryHidden[i];
   }
 })

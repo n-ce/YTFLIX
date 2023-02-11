@@ -29,13 +29,9 @@ _They follow a simple & easy JSON format!_
 As of v2.2
 
 <div align="center">
-<img src="Assets/Screenshots/1.png" width="32%" >  <img src="Assets/Screenshots/2.png" width="32%" >  <img src="Assets/Screenshots/3.png" width="32%" >
+<img src="Assets/Screenshots/portrait.avif" width="30%" >
+<img src="Assets/Screenshots/desktop.avif" width="70%" >
 </div>
-
-As of v2.1
-
-<img src="Assets/Screenshots/desktop.png" >
-
 
 ### Software used 🌈
 - [Spck Code Editor [Android]](https://play.google.com/store/apps/details?id=io.spck)
