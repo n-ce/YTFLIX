@@ -1,24 +1,23 @@
+const categoryBtn = document.querySelectorAll('li');
 //DARK MODE
-const body = document.body.style;
 const checkBox = document.querySelector('.uk-checkbox');
 const nav = document.querySelector('nav').style;
 
-function meta(y, b) {
-  document.querySelector('meta[name="theme-color"]').setAttribute("content", y);
-  body.backgroundColor = b;
-  nav.backgroundColor = y;
-
+function theme(navColor, bodyColor) {
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", navColor);
+  document.body.style.backgroundColor = bodyColor;
+  nav.backgroundColor = navColor;
 }
 
 //prefers color scheme
-let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
+let colorSchemeQueryList = matchMedia('(prefers-color-scheme: dark)');
 
 const setColorScheme = e => {
   if (e.matches) {
-    meta("#1f1f1f", "#121212");
+    theme("#1f1f1f", "#121212");
     checkBox.checked = true;
   } else {
-    meta("#ff4548", "white");
+    theme("#ff4548", "white");
     checkBox.checked = false;
   }
 }
@@ -27,67 +26,54 @@ setColorScheme(colorSchemeQueryList);
 colorSchemeQueryList.addListener(setColorScheme);
 
 //local storage
-if (window.localStorage.getItem('data-theme') == "#1f1f1f") {
-  window.localStorage.setItem('data-theme', "#1f1f1f");
-  meta("#1f1f1f", "#121212");
+if (localStorage.getItem('data-theme')) {
+  theme("#1f1f1f", "#121212");
   checkBox.checked = true;
 }
 checkBox.onclick = function() {
   if (checkBox.checked) {
-    window.localStorage.setItem('data-theme', "#1f1f1f");
-    meta("#1f1f1f", "#121212");
+    localStorage.setItem('data-theme', "#1f1f1f");
+    theme("#1f1f1f", "#121212");
   } else {
-    window.localStorage.setItem('data-theme', "#ff4548");
-    meta("#ff4548", "white");
+    localStorage.clear();
+    theme("#ff4548", "white");
   }
 }
 
 //SEARCH
 const search = document.querySelector(".uk-search-input");
-search.onkeyup = function() {
-  let input = search.value.toLowerCase();
-  const x = document.querySelectorAll('li');
-  for (let i = 0; i < x.length; i++) {
-    !x[i].innerHTML.toLowerCase().includes(input) ?
-      x[i].style.display = "none" :
 
-      x[i].style.display = "list-item";
-  }
+search.onkeyup = function() {
+  for (const i of categoryBtn)
+    !i.innerHTML.toLowerCase()
+    .includes(search.value.toLowerCase()) ?
+    i.style.display = "none" :
+    i.style.display = "list-item";
+
 }
 
 //FETCH DATA
-function parse(i) {
-  fetch("https://raw.githubusercontent.com/wiki/n-ce/YTFLIX/" + ['Originals', 'Anime', 'English', 'Hindi', 'Korean'][i] + ".md")
-    .then(res => res.text())
-    .then(data => {
-      const json = JSON.parse(data.slice(3));
-      for (let i = 0; i < json.length; i++) {
-        const list = document.createElement("li");
-        list.innerHTML = '<a href=\"https://youtube.com/' + json[i].URL + '\">' + json[i].Name + '</a>';
-        addlist[a].appendChild(list);
-      }
-    })
-    .catch(err => console.log('error: ' + err))
-}
-
 const addlist = document.querySelectorAll('.uk-list');
+const categories = ['Originals', 'Anime', 'English', 'Hindi', 'Korean'];
+const categoryClosed = [true, true, true, true, true];
 
-//Click Detection
-let countO = countA = countE = countH = countK = true;
-
-const count = [countO, countA, countE, countH, countK];
-
-for (let i = 0; i < 5; i++) {
-  document.querySelectorAll('li')[i].onclick = function() {
-
-    if (count[i]) parse(i, a = i)
-    else {
-
-      while (addlist[i].hasChildNodes()) {
+categories.forEach((v, i) => {
+  categoryBtn[i].onclick = function() {
+    if (categoryClosed[i]) {
+      fetch(`https://raw.githubusercontent.com/wiki/n-ce/YTFLIX/${v}.md`)
+        .then(res => res.text())
+        .then(text => { // ⬇️ converts markdown to json
+          for (const v of JSON.parse(text.slice(3))) {
+            const list = document.createElement("li");
+            list.innerHTML = `<a href="https://youtube.com/${v.URL}">${v.Name}</a>`;
+            addlist[i].appendChild(list);
+          }
+        })
+        .catch(err => alert(err))
+    } else {
+      while (addlist[i].hasChildNodes())
         addlist[i].removeChild(addlist[i].firstChild)
-      }
-
     }
-    count[i] = !count[i];
+    categoryClosed[i] = !categoryClosed[i];
   }
-}
+})
