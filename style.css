@@ -76,10 +76,10 @@ input[type="checkbox"] {
           user-select: none;
 }
 
+
 #text,
 .uk-card {
   color: white;
-  text-shadow: 0 0 0.5rem #000;
 }
 
 .uk-badge {
@@ -93,10 +93,15 @@ li {
   animation: slide 0.5s;
 }
 
-
+#text{
+  background-image: radial-gradient(#0009,transparent);
+  border-radius: 1rem;
+  text-shadow: 0 0 0.3rem black;
+}
 
 h3 {
-  margin-left: 2rem
+  margin-left: 2rem;
+  text-shadow: 0 0 0.3rem black;
 }
 
 
@@ -142,4 +147,8 @@ h3 {
   span {
     display: inline;
   }
+}
+
+.hide{
+  display: none;
 }
