@@ -12,14 +12,12 @@
   <meta name="theme-color" content="crimson">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" sizes="512x512" href="Assets/Icons/maskable_icon_x512.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="Assets/Icons/maskable_icon_x192.png" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
+  <link rel="icon" href="Assets/Icons/maskable_icon_x192.png" />
+  <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
   
-  <link rel="stylesheet" href="style.css" />
+  <link defer rel="stylesheet" href="style.css" />
   
 </head>
 
@@ -78,9 +76,8 @@
       <p>YTFLIX is a free and open source website with one goal which is to provide full length movie links from youtube. It has been a solo project so far, it utilizes the UIKIT Framework and is completely coded on a mobile device using Spck Code Editor on Android. Thank you for reading and Share this website to your friends & family.<br><br>@n-ce, Animesh Nath.</p>
     </div>
   </div>
-  <!-- MAIN SCRIPT & PWA SERVICE WORKER-->
-  <script src="script.js"></script>
-  <script src="service-worker.js"></script>
+  <!-- MAIN SCRIPT-->
+  <script src="script.js" type="module"></script>
 </body>
 
 </html>
